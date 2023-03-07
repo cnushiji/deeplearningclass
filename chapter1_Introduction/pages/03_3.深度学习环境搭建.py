@@ -53,11 +53,11 @@ with tab3:
 
     col1, col2, col3 = st.columns([1,1.1,1.05])
     with col1:
-        st.image('./pages/图片/图片1.png',caption='图1')
+        st.image('./chapter1_Introduction/pages/图片/图片1.png',caption='图1')
     with col2:
-        st.image('./pages/图片/图片2.png',caption='图2')
+        st.image('./chapter1_Introduction/pages/图片/图片2.png',caption='图2')
     with col3:
-        st.image('./pages/图片/图片3.png',caption='图3')
+        st.image('./chapter1_Introduction/pages/图片/图片3.png',caption='图3')
 
     """- 下载pytorch："""
     r"""$ \qquad $ Step1 开始菜单打开anaconda Navigator→Environments →base⊳ →open Terminal"""
