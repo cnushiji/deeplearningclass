@@ -12,7 +12,7 @@ with tab1:
     """- 领域导图："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片9.png', caption='图9')
+        st.image('./chapter1_Introduction/pages/图片/图片9.png', caption='图9')
     """- AI三次发展浪潮："""
     r"""$ \qquad $ 1956年，达特茅斯会议，“人工智能”概念首次提出，历经60余年，人工智能经历了三次发展浪潮。
 """
@@ -24,7 +24,7 @@ with tab1:
 """
     _, col1, _ = st.columns([1, 30, 1])
     with col1:
-        st.image('./pages/图片/图片10.png', caption='图10')
+        st.image('./chapter1_Introduction/pages/图片/图片10.png', caption='图10')
     """- AI的两种划分："""
     r"""$ \qquad $ 第一种划分：中科院院士张钹、李德毅等认为人工智能的理论发展可划分为计算、感知、认知三个阶段。计算智能即快速计算、记忆存储能力；感知智能，即视觉、听觉、触觉等感知能力；认知智能即具有推理、可解释性的能力。
 """
@@ -33,11 +33,11 @@ with tab1:
     """
     _, col1, _ = st.columns([1, 20, 1])
     with col1:
-        st.image('./pages/图片/图片11.png', caption='图11')
+        st.image('./chapter1_Introduction/pages/图片/图片11.png', caption='图11')
     """- AI发展脉络："""
     _, col1, _ = st.columns([1, 16, 1])
     with col1:
-        st.image('./pages/图片/图片12.png', caption='图12')
+        st.image('./chapter1_Introduction/pages/图片/图片12.png', caption='图12')
 
 with tab2:
     """- 机器学习简介："""
@@ -55,12 +55,12 @@ with tab2:
     """- 相互关系："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片13.png', caption='图13')
+        st.image('./chapter1_Introduction/pages/图片/图片13.png', caption='图13')
 
     """- 基本过程："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片14.png', caption='图14')
+        st.image('./chapter1_Introduction/pages/图片/图片14.png', caption='图14')
 
     """- 研究进展："""
     r"""$ \qquad $ 50年代，图灵测试提出，塞缪尔开发西洋跳棋游戏。"""
@@ -86,11 +86,11 @@ with tab3:
 """
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片15.png', caption='图15')
+        st.image('./chapter1_Introduction/pages/图片/图片15.png', caption='图15')
     """- 典型的ANN结构："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片16.png', caption='图16')
+        st.image('./chapter1_Introduction/pages/图片/图片16.png', caption='图16')
     r"""$ \qquad $ 特点： 1.非线性 $ \qquad $ 2.非常定性 $ \qquad $ 3.非局限性 $ \qquad $ 4.非凸性"""
     r"""$ \qquad $ 优点： 1.具有自学习能力 $ \qquad $ 2. 具有联想存储功能 $ \qquad $ 3.具有高速寻找最优解的能力
 """
@@ -98,7 +98,7 @@ with tab3:
     r"""$ \qquad $ 1.前向网络 $ \qquad $ 2.自学习自编码 $ \qquad $ 3.自循环神经网络 $ \qquad $ 4.强化学习"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片17.png', caption='图17')
+        st.image('./chapter1_Introduction/pages/图片/图片17.png', caption='图17')
     """- 前向网络："""
     r"""$ \qquad $ 日本学者邦彦提出神经认知机(Neocognitron)，给出了卷积和池化的思想。"""
     r"""$ \qquad $ 1986年，Hinton提出了反向传播训练MLP解决了感知机不能处理非线性学习的问题。"""
@@ -107,7 +107,7 @@ with tab3:
     r"""$ \qquad $ 2016年，何凯明提出残差网络ResNet,极大增加了网络深度，效果有很大提升，成为图像识别、目标检测网络总的骨干架构。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片18.png', caption='图18 CNN')
+        st.image('./chapter1_Introduction/pages/图片/图片18.png', caption='图18 CNN')
 
     """- 自学习自编码学习："""
     r"""$ \qquad $ 自学习自编码学习以生成模型为主，机器学习中生成模型一直占据着一个非常重要的地位，但基于神经网络的生成模型一直没有引起关注。"""
@@ -117,16 +117,16 @@ with tab3:
     r"""$ \qquad $ 生成对抗模型：2014年，Goodfellow等提出生成对抗模型GAN，它通过判别器和生成器进行对抗训练生成模型。后续有大量跟进研究，包括DCGAN、WGAN等。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片19.png', caption='图19 Auto-Encoder')
+        st.image('./chapter1_Introduction/pages/图片/图片19.png', caption='图19 Auto-Encoder')
     """- 自循环神经网络："""
     r"""$ \qquad $ 自循环神经网络模型，或者序列模型不是因为深度学习才有的，而是很早以前就有相关研究，例如有向图模型中的隐马尔科夫HMM、无向图模型中的条件随机场模型CRF等都是非常成功的序列模型。
 """
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片20.png', caption='图20 RNN模型')
+        st.image('./chapter1_Introduction/pages/图片/图片20.png', caption='图20 RNN模型')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片21.png', caption='图21 GAN')
+        st.image('./chapter1_Introduction/pages/图片/图片21.png', caption='图21 GAN')
     """- 增强学习(RL)："""
     r"""$ \qquad $ 增强学习（Rinforcement Learning），以强化学习为代表，它讨论的是一个智能体（Agent）怎么在一个复杂不确定的环境（environment）里面去极大化它能获得的奖励（Reward)。这个领域最出名的属谷歌的DeepMind公司。"""
     r"""$ \qquad $ 1.Q-learning是很有名的传统RL算法，Deep Q-learning将原来的Q值表用神经网络来代替。"""
@@ -135,7 +135,7 @@ with tab3:
     r"""$ \qquad $ 4.AlphaGo，既用了RL的方法也有传统的蒙特卡洛搜索技巧，DeepMind后来提出了一个用AlphaGo框架，但通过自主学习来万不同游戏的新算法AlphaZero。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片22.png', caption='图22 RL代表算法')
+        st.image('./chapter1_Introduction/pages/图片/图片22.png', caption='图22 RL代表算法')
 
     """- 深度学习三要素："""
     r"""$ \qquad $ 数据：数据是深度学习算法的粮食，很大程度上决定了算法性能的好坏，通常深度学习都需要大量数据来训练模型。"""
@@ -147,48 +147,48 @@ with tab4:
     r"""$ \qquad $ 1.影像诊断：计算机视觉、计算机图形、深度学习"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片23.png', caption='图23 新冠肺炎肺部CT图像智能诊断')
+        st.image('./chapter1_Introduction/pages/图片/图片23.png', caption='图23 新冠肺炎肺部CT图像智能诊断')
     r"""$ \qquad $ 2.医疗机器人：机器人、人机交互"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片24.jpg', caption='图24 假肢机器人')
+        st.image('./chapter1_Introduction/pages/图片/图片24.jpg', caption='图24 假肢机器人')
 
     r"""$ \qquad $ 3.远程诊断：知识图谱、深度学习算法"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片25.jpg', caption='图25 远程脑起搏器成功实施，5G医疗落地')
+        st.image('./chapter1_Introduction/pages/图片/图片25.jpg', caption='图25 远程脑起搏器成功实施，5G医疗落地')
 
     r"""$ \qquad $ 4.电子病历：自然语言处理、语音识别"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片26.jpeg', caption='图26 深度学习分析电子病历，预测患者病情发展')
+        st.image('./chapter1_Introduction/pages/图片/图片26.jpeg', caption='图26 深度学习分析电子病历，预测患者病情发展')
 
     """- 智慧城市："""
     r"""$ \qquad $ 1.智慧物流及建筑服务系统：机器学习、物联网、安全与隐私"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片27.png', caption='图27 某物流公司的物流机器人正在高效工作')
+        st.image('./chapter1_Introduction/pages/图片/图片27.png', caption='图27 某物流公司的物流机器人正在高效工作')
 
     r"""$ \qquad $ 2.自动驾驶：机器学习、计算机视觉、人机交互"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片28.jpeg', caption='图28 自动驾驶汽车：通过电脑系统实现的无人驾驶的智能汽车')
+        st.image('./chapter1_Introduction/pages/图片/图片28.jpeg', caption='图28 自动驾驶汽车：通过电脑系统实现的无人驾驶的智能汽车')
 
     r"""$ \qquad $ 3.智能家居：自然语言处理、自然语言理解、安全与隐私、人机交互、语音识别、计算机视觉"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片29.jpg', caption='图29 人用平板电脑控制智能家居助手作为虚拟屏幕 ')
+        st.image('./chapter1_Introduction/pages/图片/图片29.jpg', caption='图29 人用平板电脑控制智能家居助手作为虚拟屏幕 ')
 
     r"""$ \qquad $ 4.智能交通系统：机器学习、数据挖掘、计算机视觉、自家语言处理、自然语言理解、图像识别、智能芯片"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片30.jpg', caption='图30 智能交通 ')
+        st.image('./chapter1_Introduction/pages/图片/图片30.jpg', caption='图30 智能交通 ')
 
 with tab5:
     """- 研究趋势："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片31.png', caption='图31')
+        st.image('./chapter1_Introduction/pages/图片/图片31.png', caption='图31')
 
     """- AI的挑战："""
     r"""$ \qquad $ 1.模型的可解释性：目前的深度学习模型是黑盒模型，模型的结果不具有可解释性。"""
