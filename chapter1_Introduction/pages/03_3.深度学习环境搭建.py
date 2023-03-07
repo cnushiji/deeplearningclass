@@ -53,7 +53,7 @@ with tab3:
 
     col1, col2, col3 = st.columns([1,1.1,1.05])
     with col1:
-        st.image('.图片/图片1.png',caption='图1')
+        st.image('pages/图片/图片1.png',caption='图1')
     with col2:
         st.image('./pages/图片/图片2.png',caption='图2')
     with col3:
