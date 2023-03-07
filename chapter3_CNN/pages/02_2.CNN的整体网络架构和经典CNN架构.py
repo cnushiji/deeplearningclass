@@ -9,7 +9,7 @@ with tab1:
     """- 一个典型的卷积网络是由卷积层、汇聚层、全连接层交叉堆叠而成。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片14.png', caption='图14 常用的卷积网络整体结构')
+        st.image('./chapter3_CNN/pages/图片/图片14.png', caption='图14 常用的卷积网络整体结构')
     """- 目前，卷积网络的整体结构趋向于使用更小的卷积核，以及更深的结构。是否选用全连接层视具体任务而定，比如对图片回归任务来说，通常选用全卷积神经网络。"""
 
 with tab2:
@@ -17,15 +17,15 @@ with tab2:
     r""" $ \qquad $ 简介：1998年，由Lecun提出。它是一个非常成功的神经网络模型。基于LeNet-5的手写数字识别系统在 20世纪90年代被美国很多银行使用，用来识别支票上面的手写数字。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片15.png', caption='图15 Lenet-5的网络结构')
+        st.image('./chapter3_CNN/pages/图片/图片15.png', caption='图15 Lenet-5的网络结构')
     """- AlexNet"""
     r""" $ \qquad $ 简介：AlexNet[Krizhevsky et al., 2012]是第一个现代深度卷积网络模型，其首次使用了很多现代深度卷积网络的技术方法，比如使用 GPU 进行并行训练，采用了 ReLU 作为非线性激活函数，使用 Dropout 防止过拟合，使用数据增强来提高模型准确率等。AlexNet赢得了2012年ImageNet图像分类竞赛的冠军。这些技术极大地推动了端到端的深度学习模型的发展。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片16.jpg', caption='图16 AlexNet的网络结构')
+        st.image('./chapter3_CNN/pages/图片/图片16.jpg', caption='图16 AlexNet的网络结构')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片17.png', caption='图17 AlexNet的网络结构')
+        st.image('./chapter3_CNN/pages/图片/图片17.png', caption='图17 AlexNet的网络结构')
 
     """- VGGNet """
     r""" $ \qquad $ 简介："""
@@ -34,7 +34,7 @@ with tab2:
     r""" $ \qquad \qquad $ VGGNet获得了ILSVRC 2014年比赛的亚军和定位项目的冠军，在top5上的错误率为7.5%。目前为止，VGGNet依然被用来提取图像的特征。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片18.png', caption='图18 VGGNet的网络结构')
+        st.image('./chapter3_CNN/pages/图片/图片18.png', caption='图18 VGGNet的网络结构')
     """- InceptionNet-V1 """
     r""" $ \qquad $ 简介："""
     r""" $ \qquad \qquad $ Google Inception Net(Inception V1)首次出现是在ILSVRC 2014的比赛中，Google Inception Net以top5的错误率为6.67%获得了第一名，而VGGNet的top5错误率为7.3%。Inception V1的特点就是控制了计算量和参数量，Inception V1只有500万 的参数量，而AlexNet有6000万，Inception V1一共有22层，比VGGNet更深。"""
@@ -45,13 +45,13 @@ with tab2:
     r""" $ \qquad $ Inception模块:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片19.png', caption='图19 Inception模块')
+        st.image('./chapter3_CNN/pages/图片/图片19.png', caption='图19 Inception模块')
     r""" $ \qquad $ InceptionNet V1的网络结构："""
     r""" $ \qquad \qquad $ Inception 网络有多个版本，其中最早的Inception v1版本就是非常著名的GoogLeNet [Szegedy et al., 2015]．GoogLeNet 不写为GoogleNet，是为了向LeNet致敬．GoogLeNet赢得了 2014年ImageNet图像分类竞赛的冠军。"""
     r""" $ \qquad \qquad $ 网络结构：GoogLeNet 由9个 Inception v1 模块和 5 个池化层，以及其他一些卷积层和全连接层构成，总共为22层网络，如下图所示（清晰图见https://nndl.github.io/v/cnn-googlenet）"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片20.png', caption='图20 InceptionNet-V1的网络结构')
+        st.image('./chapter3_CNN/pages/图片/图片20.png', caption='图20 InceptionNet-V1的网络结构')
     """- ResNet """
     r""" $ \qquad $ 简介："""
     r""" $ \qquad \qquad $ 2015年，微软亚洲研究院何凯明等提出ResNet网络，以3.75%的top-5的错误率获得当时的ILSCRC大赛冠军。"""
@@ -59,7 +59,7 @@ with tab2:
     r""" $ \qquad $ 残差模块:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片21.png', caption='图21 残差模块')
+        st.image('./chapter3_CNN/pages/图片/图片21.png', caption='图21 残差模块')
     r""" $ \qquad $ 残差网络就是将很多个残差模块串联起来构成的一个非常深(网络深度可达100多层)的网络。"""
 
     """- 总结： """
@@ -77,14 +77,14 @@ with tab3:
     """- 举例："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片22.jpg', caption='图22 机器翻译任务')
+        st.image('./chapter3_CNN/pages/图片/图片22.jpg', caption='图22 机器翻译任务')
     r"""$ \qquad $ 传统的模型处理方式是seq-to-seq模型，其包含一个encoder端和一个decoder端，其中encoder端对"who are you"进行编码，然后将整句话的信息传递给decoder端，由decoder解码出"你是谁"。在这个过程中，decoder是逐字解码的，在每次解码的过程中，如果接收信息过多，可能会导致模型的内部混乱，从而导致错误结果的出现。"""
     r"""$ \qquad $ 若使用Attention机制，在生成"你"的时候和单词"you"关系比较大，和"who are"关系不大，所以我们更希望在这个过程中能够使用Attention机制，将更多注意力放到"you"上，而不要太多关注"who are"，从而提高整体模型的表现。"""
     r"""- Attention机制自提出以来，出现了很多不同Attention应用方式，但均是将模型的注意力聚焦在重要的事情上。"""
     """- 经典注意力机制：以机器翻译为例"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片23.jpg', caption='图23 机器翻译示例图')
+        st.image('./chapter3_CNN/pages/图片/图片23.jpg', caption='图23 机器翻译示例图')
     r"""$ \qquad $ 图23展示的是生成单词"machine"时的计算方式。首先将前一个时刻的输出状态$q_2$和Encoder的输出进行Attention计算，得到一个当前时刻的context，用公式可以这样组织："""
     st.latex(r"""[a_1,a_2,a_3,a_4]=softmax([s(q_2,h_1),s(q_2,h_2),s(q_2,h_3),s(q_2,h_4)])""")
     st.latex(r"""context=\sum_{i=1}^4{a_i\cdot{h_i}}""")
@@ -93,7 +93,7 @@ with tab3:
     """- 注意力打分函数："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片24.webp', caption='图24 Attention机制图')
+        st.image('./chapter3_CNN/pages/图片/图片24.webp', caption='图24 Attention机制图')
     r"""$ \qquad $ 假设现在我们要对一组输入$H=[h_1,h_2,...,h_n]$使用Attention机制计算重要的内容，这里往往需要一个查询向量q(这个向量往往和做的任务有关，比如图23中用到的$q_2$) ，然后通过一个打分函数计算查询向量q和每个输入$h_i$之间的相关性，得出一个分数。"""
     st.latex(r"""a_i=softmax(s(h_i,q))=\frac{exp(s(h_i,q))}{\sum_{j=1}^n{exp(s(h_j,q))}}""")
     r"""$ \qquad $ 打分函数的计算方式："""

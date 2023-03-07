@@ -15,34 +15,34 @@ with tab1:
     r"""$ \qquad $ 深度残差网络是由微软研究院的何恺明、张祥雨、任少卿、孙剑等人提出的，是CNN图像史上的一件里程碑事件。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片25.png', caption='图25 ResNet在ILSVRC和COCO 2015上的战绩')
+        st.image('./chapter3_CNN/pages/图片/图片25.png', caption='图25 ResNet在ILSVRC和COCO 2015上的战绩')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片26.png', caption='图26 ImageNet分类Top-5误差')
+        st.image('./chapter3_CNN/pages/图片/图片26.png', caption='图26 ImageNet分类Top-5误差')
     r"""$ \qquad $ 1.深度网络中的退化问题:"""
     r"""$ \qquad \qquad $ 1. 从经验来看，网络的深度对模型的性能至关重要，当增加网络层数后，网络可以进行更加复杂的特征模式的提取，所以当模型更深时，理论上可以取得更好的结果。"""
     r"""$ \qquad \qquad $ 2. 实验发现深度网络出现了退化问题（Degradation problem）:网络深度增加时，网络准确度出现饱和，甚至出现下降。如图："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片27.png', caption='图27 20层与56层网络在CIFAR-10上的误差')
+        st.image('./chapter3_CNN/pages/图片/图片27.png', caption='图27 20层与56层网络在CIFAR-10上的误差')
     """$ \qquad $ 2.残差学习单元： """
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片28.png', caption='图28 残差学习单元')
+        st.image('./chapter3_CNN/pages/图片/图片28.png', caption='图28 残差学习单元')
     """$ \qquad $ 3.不同的残差单元："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片29.png', caption='图29 不同的残差单元')
+        st.image('./chapter3_CNN/pages/图片/图片29.png', caption='图29 不同的残差单元')
     """$ \qquad $ 4.ResNet的网络结构："""
     _, col1 = st.columns([1, 2])
     with col1:
-        st.image('./pages/图片/图片30.png', caption='图30 ResNet的网络结构')
+        st.image('./chapter3_CNN/pages/图片/图片30.png', caption='图30 ResNet的网络结构')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片31.png', caption='图31 18-layer和34-layer的网络效果')
+        st.image('./chapter3_CNN/pages/图片/图片31.png', caption='图31 18-layer和34-layer的网络效果')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片32.png', caption='图32 改进后的残差单元及效果')
+        st.image('./chapter3_CNN/pages/图片/图片32.png', caption='图32 改进后的残差单元及效果')
 
 with tab2:
     """- 目标检测的定义：从输入图像中提取感兴趣区域，并绘制边界框。通常和图像识别结合在一起，对提取的目标区域进行识别。"""
@@ -50,13 +50,13 @@ with tab2:
     """- 从计算机视觉的角度看，目标检测是分类+定位，从机器学习的角度看，目标检测是分类+回归。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片33.png', caption='图33')
+        st.image('./chapter3_CNN/pages/图片/图片33.png', caption='图33')
     r"""- 检测识别的方法："""
     r"""$ \qquad $ 1.传统方法：Hog/SIFT视觉特征提取+svm分类。"""
     r"""$ \qquad $ 2.基于深度学习的目标检测识别方法: one-stage、two-stage。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片34.jpg', caption='图34 Two-stage算法')
+        st.image('./chapter3_CNN/pages/图片/图片34.jpg', caption='图34 Two-stage算法')
     """- 检测识别的应用————1.faster R-CNN："""
     r"""$ \qquad $ R-CNN家族："""
     r"""$ \qquad \qquad $ Ross B.Girshick在2016年提出了新的Faster RCNN, 综合性能有较大提高，在检测速度方面尤为明显。"""
@@ -66,44 +66,44 @@ with tab2:
     r"""$ \qquad \qquad $ mask R-CNN"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片35.jpg', caption='图35')
+        st.image('./chapter3_CNN/pages/图片/图片35.jpg', caption='图35')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片36.jpg', caption='图36')
+        st.image('./chapter3_CNN/pages/图片/图片36.jpg', caption='图36')
     r"""$ \qquad \qquad $ 设计 Region Proposal Networks（RPN），利用 CNN 卷积操作后的特征图生成候选区，代替了Selective Search、EdgeBoxes 等方法，速度上提升明显。"""
     r"""$ \qquad \qquad $ 训练 Region Proposal Networks 与检测网络（Fast R-CNN）共享卷积层，大幅提高网络的检测速度。"""
     r"""$ \qquad \qquad $ 详细介绍见：https://zhuanlan.zhihu.com/p/31426458"""
     _, col1 = st.columns([1, 2])
     with col1:
-        st.image('./pages/图片/图片37.png', caption='图37 Faster RCNN基本结构（4个）')
+        st.image('./chapter3_CNN/pages/图片/图片37.png', caption='图37 Faster RCNN基本结构（4个）')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片38.png', caption='图38 VGG16模型中的faster_rcnn_test.pt的网络结构')
+        st.image('./chapter3_CNN/pages/图片/图片38.png', caption='图38 VGG16模型中的faster_rcnn_test.pt的网络结构')
     """- 检测识别的应用————2.YoLo系列："""
     r"""$ \qquad $ YoLo系列是one-stage算法，即直接从图片生成位置和类别，没有明显的生成候选框的过程。YOLO是You only look once的缩写。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片39.jpg', caption='图39')
+        st.image('./chapter3_CNN/pages/图片/图片39.jpg', caption='图39')
     r"""$ \qquad $ YoLo思想：YoLo固定维度的办法是把模型的输出划分成网格形状，每个网格中的cell都可以输出物体的类别和bounding box的坐标，如下图：
 """
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片40.png', caption='图40')
+        st.image('./chapter3_CNN/pages/图片/图片40.png', caption='图40')
     r"""$ \qquad $ YoLo核心思想: """
     r"""$ \qquad \qquad $ 物体落在哪个cell,哪个cell就负责预测这个物体。"""
     r"""$ \qquad \qquad $ 训练阶段，如果物体中心络再这个cell,那么就给这个cell打上这个物体的label(包括xywh和类别)。即，在训练阶段，就教会cell要预测图像中的哪个物体。"""
     r"""$ \qquad \qquad $ 测试阶段，因为在训练阶段已经教会了cell去预测中心落在该cell中的物体，那么cell自然也会这么做。"""
     _, col1 = st.columns([1, 2])
     with col1:
-        st.image('./pages/图片/图片41.png', caption='图41')
+        st.image('./chapter3_CNN/pages/图片/图片41.png', caption='图41')
     r"""$ \qquad $ YoLo模型: """
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片42.png', caption='图42')
+        st.image('./chapter3_CNN/pages/图片/图片42.png', caption='图42')
     r"""$ \qquad $ YoLo模型架构:"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片43.png', caption='图43')
+        st.image('./chapter3_CNN/pages/图片/图片43.png', caption='图43')
 
 with tab3:
     """- 三维重建的定义：用相机拍摄真实世界的物体、场景，并通过计算机视觉技术进行处理，从而得到物体的三维模型。英文术语：3D Reconstruction。"""
@@ -113,17 +113,17 @@ with tab3:
     """- 三维重建从算法角度看有哪些方向?"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片51.png', caption='图51')
+        st.image('./chapter3_CNN/pages/图片/图片51.png', caption='图51')
     r"""$ \qquad $ MVS是什么?"""
     r"""$ \qquad \qquad $ Multi-View Stereo，用RGB信息重建三维几何模型。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片52.png', caption='图52')
+        st.image('./chapter3_CNN/pages/图片/图片52.png', caption='图52')
     r"""$ \qquad \qquad $ 输入：就是一系列的RGB照片，这些照片可能存在一些重合势场。将他们的pose计算出来，然后进行一个三维模型的重建，最后进行纹理贴图（非必要）。"""
     """- 三维重建的流程："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片53.png', caption='图53')
+        st.image('./chapter3_CNN/pages/图片/图片53.png', caption='图53')
     r"""$ \qquad $ 1.输入是images和pose,其中pose是通过SFM(Structure-fromMotion )/Slam(Simultaneous Localization and Mapping ) 来做的。"""
     r"""$ \qquad $ 2.通过上述两种为输入信息，我们可以计算出深度图。"""
     r"""$ \qquad $ 3.得到深度图后，我们再进行点云融合。"""
@@ -135,13 +135,13 @@ with tab3:
     """$ \qquad \qquad \qquad $ SLAM：可以实时去做；SFM：用于离线（COLMAP）"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片54.png', caption='图54')
+        st.image('./chapter3_CNN/pages/图片/图片54.png', caption='图54')
 
     """$ \qquad $ 3D重建："""
     """$ \qquad \qquad $ 根据SFM/SLAM计算的位姿，进行稠密重建恢复场景几何信息。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片55.png', caption='图55')
+        st.image('./chapter3_CNN/pages/图片/图片55.png', caption='图55')
 
     """- 为什么要应用基于深度学习的3D重建？"""
     """$ \qquad $ 传统的基于光度一致性的MVS重建："""
@@ -151,7 +151,7 @@ with tab3:
     """$ \qquad \qquad $ 通过大量的数据去学习特征，它会参考全局语义的信息，能更好的帮助我们进行重建。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片56.png', caption='图56')
+        st.image('./chapter3_CNN/pages/图片/图片56.png', caption='图56')
     """$ \qquad \qquad $ 优点：基于学习的特征——匹配更鲁棒、基于shape先验——重建更完整。"""
     """$ \qquad \qquad $ 局限性：内存限制，难以重建高分辨率；依赖大数据。"""
 
@@ -162,16 +162,16 @@ with tab3:
     st.latex(r"""depth=\frac{bf}{dis}""")
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片57.png', caption='图57')
+        st.image('./chapter3_CNN/pages/图片/图片57.png', caption='图57')
     r"""$ \qquad $ 三维点云：三维点云是某个坐标系下的点的数据集包含了丰富的信息，包括三维坐标XYZ,颜色RGB等信息"""
     r"""$ \qquad $ 三维网格（mesh）：由物体的邻接点云构成的多边形组成的，通常由三角形、四边形或其他的简单凸多边形组成。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片58.png', caption='图58')
+        st.image('./chapter3_CNN/pages/图片/图片58.png', caption='图58')
     r"""$ \qquad $ 纹理贴图模型（texture mesh）：带有颜色信息的三维网格模型，所有的颜色信息储存在一张纹理图上，显示时根据每个网格的纹理坐标和对应的纹理图进行渲染得到高分辨率的彩色模型。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片59.png', caption='图59')
+        st.image('./chapter3_CNN/pages/图片/图片59.png', caption='图59')
 
     """- 三维重建的深度学习应用————基于NeRF的三维重建："""
     r"""$ \qquad $ NeRF(ECCV 2020)主要贡献："""
@@ -185,7 +185,7 @@ with tab3:
     优化合成新视图所需要的唯一输入是一组具有已知相机位姿的图像，而5D坐标是通过沿着对应像素的相机光线采样所得到的。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片66.png', caption='图66')
+        st.image('./chapter3_CNN/pages/图片/图片66.png', caption='图66')
 
     r"""$ \qquad \qquad \textbf{2.坐标变换：}$"""
     r"""$ \qquad \qquad $ 三种坐标系："""
@@ -302,7 +302,7 @@ with tab3:
     r"""$ \qquad \qquad $ 神经辐射场 NeRF 是 Neural Radiance Fields 的缩写，其可以简要概括为用一个 MLP 神经网络去隐式地学习一个静态 3D 场景。为了训练网络，针对一个静态场景，需要提供大量相机参数已知的图片。基于这些图片训练好的神经网络，即可以从任意角度渲染出图片的结果。以下为 NeRF 的总体框架："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片67.png', caption='图67')
+        st.image('./chapter3_CNN/pages/图片/图片67.png', caption='图67')
     r"""$ \qquad \qquad $ 1.获取采样点的5D坐标(x,d)，该坐标包含3D位置信息x=(x,y,z)和视角方向$d=(\theta,\phi)$。"""
     r"""$ \qquad \qquad $ 2.通过位置编码对3D位置$x\in{R^3}$和视角方向$d\in{R^2}$进行相应处理，从而得到编码后的信息$\gamma{(x)}\in{R^{60}}$和$\gamma{(d)}\in{R^{24}}$。"""
     r"""$ \qquad \qquad $ 3.将$\gamma{(x)}$输入到8层全连接层中，每层通道数为256且都经过ReLU函数激活（黑色实箭头）。此外，论文还遵循DeepSDF架构，将通过一个条约链接将输入$\gamma{(x)}$拼接到第5个全连接层的输出中。"""
@@ -347,7 +347,7 @@ with tab3:
     点通过前面公式$\hat{C}(r)$一同计算fine网络的渲染结果$\hat{C}_f(r)$。虽然coarse to fine是计算机视觉领域中常见的一个思路，但这篇论文中用coarse网络来生成概率密度很眼熟，再基于概率密度函数采样更精细的点算得上很有趣新颖的做法。采样的图示如下："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片68.png', caption='图68')
+        st.image('./chapter3_CNN/pages/图片/图片68.png', caption='图68')
     r"""$ \qquad \qquad $ 上图中，白色的点为第一阶段采样的$N_c$个点，而黄色的点为第二阶段根据PDF采样的$N_f$个点。"""
     r"""$ \qquad \qquad \textbf{损失函数：}$ """
     r"""$ \qquad \qquad $ 由于渲染函数是可微的，所以可以通过下式来计算损失："""
@@ -359,38 +359,38 @@ with tab3:
     r"""$ \qquad \qquad $ 以下是运行200k轮后生成的lego模型（显卡RTX3060 6G，训练时间约15h），代码使用pytorch版本。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片69.gif', caption='图69')
+        st.image('./chapter3_CNN/pages/图片/图片69.gif', caption='图69')
 
     """- 三维重建的应用场景：比如增强现实（AR）、混合现实（MR)、机器人导航、自动驾驶等领域的核心技术之一。"""
     r"""$ \qquad $ 影像娱乐："""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片44.png', caption='图44')
+        st.image('./chapter3_CNN/pages/图片/图片44.png', caption='图44')
     r"""$ \qquad $ 智能家居："""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片45.png', caption='图45')
+        st.image('./chapter3_CNN/pages/图片/图片45.png', caption='图45')
     r"""$ \qquad $ 文物重建、AR旅游"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片46.png', caption='图46')
+        st.image('./chapter3_CNN/pages/图片/图片46.png', caption='图46')
     r"""$ \qquad $ 自动驾驶"""
     r"""$ \qquad \qquad $ 在自动驾驶领域的主要应用是高精地图的构建，此应用对于自动驾驶的算法迭代优化、测试都非常重要。"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片47.png', caption='图47')
+        st.image('./chapter3_CNN/pages/图片/图片47.png', caption='图47')
     r"""$ \qquad $ 大型场景的构建"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片48.png', caption='图48')
+        st.image('./chapter3_CNN/pages/图片/图片48.png', caption='图48')
     r"""$ \qquad $ 逆向工程"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片49.png', caption='图49')
+        st.image('./chapter3_CNN/pages/图片/图片49.png', caption='图49')
     r"""$ \qquad $ 机器人、导航"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片50.png', caption='图50')
+        st.image('./chapter3_CNN/pages/图片/图片50.png', caption='图50')
 
 with tab4:
     """- 图像分割的定义："""
@@ -406,7 +406,7 @@ with tab4:
     """$ \qquad \qquad $ 图像若只有目标和背景两大类，那么只需要选取一个阈值进行分割，此方法成为单阈值分割；但是如果图像中有多个目标需要提取，单一阈值的分割就会出现作物，在这种情况下就需要选取多个阈值将每个目标分隔开，这种分割方法相应的成为多阈值分割。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片70.png', caption='图70')
+        st.image('./chapter3_CNN/pages/图片/图片70.png', caption='图70')
     """$ \qquad $ 阈值分割方法的优缺点："""
     """$ \qquad \qquad $ 计算简单，效率较高；"""
     """$ \qquad \qquad $ 只考虑像素点灰度值本身的特征，一般不考虑空间特征，因此对噪声比较敏感，鲁棒性不高。
@@ -464,7 +464,7 @@ with tab4:
     """$ \qquad $ Unet的结构的两大特点，U型结构和skip-connection(如下图)："""
     _, col1, _ = st.columns([1, 12, 1])
     with col1:
-        st.image('./pages/图片/图片60.png', caption='图60')
+        st.image('./chapter3_CNN/pages/图片/图片60.png', caption='图60')
 
 with tab5:
     """- 背景："""
@@ -490,13 +490,13 @@ with tab5:
     """$ \qquad $ DnCNN提出使用卷积通过端到端的残差学习，从函数回归角度用卷积神经网络将噪声从噪声图像中分离出来，取得了显著优于其他方法的去噪结果。"""
     _, col1, _ = st.columns([1, 12, 1])
     with col1:
-        st.image('./pages/图片/图片61.png', caption='图61')
+        st.image('./chapter3_CNN/pages/图片/图片61.png', caption='图61')
     """- 图像超分辨率："""
     """$ \qquad $ 超分辨率的定义：图像超分辨率（super-resolution,SR）是指利用算法将图像从低分辨率（low resolution,LR）恢复到高分辨率（high resolution,HR）的过程，是计算机视觉和图像的重要技术之一。图像超分辨率技术根据其输入输出不同大致可分为三类，即多图像、视频和单图像超分辨率。"""
     """$ \qquad $ 传统图像超分辨率方法："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片71.png', caption='图71')
+        st.image('./chapter3_CNN/pages/图片/图片71.png', caption='图71')
     """$ \qquad \\textbf{基于深度学习的单图像超分辨率重建：}$ """
     """$ \qquad $ 由于深度学习在其他计算机视觉领域中取得了突破性进展，人们尝试引入深度神经网络，通过构建深层次的网络进行训练来解决图像超分辨率重建问题。"""
     """$ \qquad $ 目前，越来越多具有深度学习功能的超分辨率模型被提出，根据是否依赖于LR图像和对应的HR图像训练网络模型，可以粗略地将其分为有监督的超分辨率和无监督的超分辨率，由于有监督的超分辨率技术能够取得较好的重建效果，是目前研究的主流方向。"""
@@ -537,11 +537,11 @@ with tab5:
     """$ \qquad $传统的图像插值算法可以在某种程度上获得这种效果，比如最近邻插值、双线性插值和双三次插值等，但是这些算法获得的高分辨率图像效果并不理想。SRCNN通过卷积算法获得了优秀的高分辨率重建图像，效果如图。"""
     _, col1, _ = st.columns([1, 12, 1])
     with col1:
-        st.image('./pages/图片/图片62.png', caption='图62')
+        st.image('./chapter3_CNN/pages/图片/图片62.png', caption='图62')
     """$ \qquad $ SRCNN是end-to-end(端到端)的超分算法，所以在实际应用中不需要任何人工干预或者多阶段的计算，其网络图如下："""
     _, col1, _ = st.columns([1, 12, 1])
     with col1:
-        st.image('./pages/图片/图片63.png', caption='图63')
+        st.image('./chapter3_CNN/pages/图片/图片63.png', caption='图63')
     """$ \qquad $ 实际上，SRCNN需要一个预处理过程：将输入的低分辨率图像进行bicubic插值（双三次插值）。"""
 
 with tab6:
@@ -557,11 +557,11 @@ with tab6:
     """$ \qquad $ 从上式可以看出，从判别器D角度来看，判别器D希望能尽可能区分真实样本x和虚假样本G(z)，因此D(x)必须尽可能大，D(G(z))尽可能小，也就是V(D,G)整体尽可能大。从生成器的角度来看，生成器G希望自己生成的虚假数据G(z)可以尽可能骗过判别器D,也就是希望D(G(z))尽可能大，也就是V(D,G)整体尽可能小。GAN的两个模块在训练相互对抗，最后达到全局最优。"""
     _, col1, _ = st.columns([1, 12, 1])
     with col1:
-        st.image('./pages/图片/图片64.png', caption='图64')
+        st.image('./chapter3_CNN/pages/图片/图片64.png', caption='图64')
 
     """- 风格迁移StyleGAN:"""
     """$ \qquad $ StyleGAN中的“Style”是指数据集中人脸的主要属性，比如人物的姿态等信息，而不是风格转换中的图像风格，这里Style是指人脸的风格，包括了脸型上面的表情、人脸朝向、发型等等，还包括纹理细节上的人脸肤色、人脸光照等方方面面。"""
     """$ \qquad $ StyleGAN用风格（style）来影像人脸的姿态、身份特征等，用噪声（noise）来影像头发丝、皱纹、肤色等细节部分。"""
     _, col1, _ = st.columns([1, 12, 1])
     with col1:
-        st.image('./pages/图片/图片65.png', caption='图65')
+        st.image('./chapter3_CNN/pages/图片/图片65.png', caption='图65')

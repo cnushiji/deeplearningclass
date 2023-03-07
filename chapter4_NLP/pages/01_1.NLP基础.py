@@ -16,7 +16,7 @@ with tab1:
     """- 在人工智能出现之前，机器智能处理结构化的数据（例如Excel里的数据）。但是网络中大部分的数据都是非结构化的，例如：文章、图片、音频、视频..."""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片60.png', caption='图60')
+        st.image('./chapter4_NLP/pages/图片/图片60.png', caption='图60')
     """- 在非结构数据中，文本的数量是最多的，它虽然没有图片和视频占用的空间大，但是它的信息量是最大的。"""
     """- 为了能够分词和利用这些文本信息，我们就需要利用NLP技术，让机器理解这些文本信息，并加以利用。"""
 
@@ -26,14 +26,14 @@ with tab1:
     """- 人类通过语言来交流，狗通过汪汪叫来交流。机器也有自己的交流方式，那就是数字信息。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片61.png', caption='图61')
+        st.image('./chapter4_NLP/pages/图片/图片61.png', caption='图61')
     """- 不同语言之间是无法沟通的，比如说人类就无法听懂狗叫，甚至不同语言的人类之间都无法直接交流，需要翻译才能交流。"""
     """- 而计算机更是如此，为了让计算机之间互相交流，人们让所有计算机都遵守一些规则，计算机的这些规则就是计算机之间的语言。"""
     """- 既然不同人类语言之间可以有翻译，娜美人类和机器之间是否可以通过”翻译“的方式直接交流呢？"""
     """- NLP就是人类和机器之间沟通的桥梁！"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片62.png', caption='图62')
+        st.image('./chapter4_NLP/pages/图片/图片62.png', caption='图62')
 
     """- $\\textbf{为什么是“自然语言”处理？}$"""
     """- 自然语言就是大家平时在生活中常用的表达方式，大家平时说的“讲人话”就是这个意思。"""
@@ -42,7 +42,7 @@ with tab1:
     """- $\\textbf{NLP的两大核心任务} $"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片63.png', caption='图63')
+        st.image('./chapter4_NLP/pages/图片/图片63.png', caption='图63')
     """- NLP有2个核心的任务："""
     """$ \qquad $ 1.自然语言理解-NLU|NLI"""
     """$ \qquad $ 2.自然语言生成-NLG"""
@@ -50,7 +50,7 @@ with tab1:
     """$ \qquad $ 自然语言理解就是希望机器像人一样，具备正常人的语言理解能力，由于自然语言在理解上有很多难点，所以NLU是至今还远不如人类的表现。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片64.png', caption='图64')
+        st.image('./chapter4_NLP/pages/图片/图片64.png', caption='图64')
     """$ \qquad $ 自然语言理解的5个难点："""
     """$ \qquad \qquad $ 1.语言的多样性"""
     """$ \qquad \qquad $ 2.语言的歧义性"""
@@ -61,7 +61,7 @@ with tab1:
     """- 自然语言生成-NLG"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片65.png', caption='图65')
+        st.image('./chapter4_NLP/pages/图片/图片65.png', caption='图65')
     """$ \qquad $ NLG是为了跨越人类和机器之间的沟通鸿沟，讲非语言格式的数据转换成人类可以理解的语言格式，如文章、报告等。"""
     """$ \qquad $ NLG的6个步骤："""
     """$ \qquad \qquad $ 1.内容确定- Content Determination"""
@@ -74,7 +74,7 @@ with tab1:
     """- $\\textbf{NLP的5个难点}$"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片66.png', caption='图66')
+        st.image('./chapter4_NLP/pages/图片/图片66.png', caption='图66')
     """$ \qquad $ 1.语言是没有规律的，或者说规律是错综复杂的。"""
     """$ \qquad $ 2.语言是可以自由组合的，可以组合复杂的语言表达。"""
     """$ \qquad $ 3.语言是一个开放集合，我们可以任意的发明创造一些新的表达方式。"""
@@ -84,7 +84,7 @@ with tab1:
     """- $ \\textbf{NLP的4个典型应用} $"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片67.png', caption='图67')
+        st.image('./chapter4_NLP/pages/图片/图片67.png', caption='图67')
     """- 情感分析"""
     """$ \qquad $ 互联网上有大量的文本信息，这些信息想要表达的内容是五花八门的，但是他们抒发的情感是一致的：正面/积极的-负面/消极的。"""
     """$ \qquad $ 通过情感分析，可以快速了解用户的舆情情况。"""
@@ -104,7 +104,7 @@ with tab1:
     """- 方式1：传统机器学习的NLP流程"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片68.png', caption='图68')
+        st.image('./chapter4_NLP/pages/图片/图片68.png', caption='图68')
     """$ \qquad $ 1.语料预处理"""
     """$ \qquad \qquad $ 1.中文语料预处理4个步骤"""
     """$ \qquad \qquad $ 2.英文语料预处理的6个步骤"""
@@ -116,7 +116,7 @@ with tab1:
     """- 方式2：深度学习的NLP流程"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片69.png', caption='图69')
+        st.image('./chapter4_NLP/pages/图片/图片69.png', caption='图69')
     """$ \qquad $ 1.语料预处理"""
     """$ \qquad \qquad $ 1.中文语料预处理的四个步骤"""
     """$ \qquad \qquad $ 2.英文预料预处理的6个步骤"""
@@ -126,7 +126,7 @@ with tab1:
     """- 英文语料预处理的6个步骤"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片70.png', caption='图70')
+        st.image('./chapter4_NLP/pages/图片/图片70.png', caption='图70')
     """$ \qquad $ 1.分词 - Tokenization"""
     """$ \qquad $ 2.词干提取 - Stemming"""
     """$ \qquad $ 3.词形还原 - Lemmatization"""
@@ -137,7 +137,7 @@ with tab1:
     """- 中文NLP语料预处理的4个步骤"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片71.png', caption='图71')
+        st.image('./chapter4_NLP/pages/图片/图片71.png', caption='图71')
     """$ \qquad $ 1.中文分词 - Chinese Word Segmentation"""
     """$ \qquad $ 2.词性标注 - Parts of Speech"""
     """$ \qquad $ 3.命名实体识别 - NER"""
@@ -152,7 +152,7 @@ with tab2:
     """ 分词就是将句子、段落、文章这种长文本，分解为以字词为单位的数据结构，方便后续的处理分析工作。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片72.png', caption='图72')
+        st.image('./chapter4_NLP/pages/图片/图片72.png', caption='图72')
 
     """ 2.为什么要分词？"""
     """ 1.将复杂问题转化为数学问题"""
@@ -160,7 +160,7 @@ with tab2:
     """$ \qquad $ 而NLP也是相同的思路，文本都是一些[非结构化数据]，我们需要先将这些数据转化为[结构化数据]，结构化数据就可以转化为数学问题了，而分词就是转化的第一步。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片73.png', caption='图73')
+        st.image('./chapter4_NLP/pages/图片/图片73.png', caption='图73')
 
     """ 2.词是一个比较合适的粒度"""
     """$ \qquad $ 词是表达完整含义的最小单位。"""
@@ -168,7 +168,7 @@ with tab2:
     """$ \qquad $ 而句子的粒度太大，承载的信息量多，很难复用。比如”传统方法要分词，一个重要原因是传统方法对远距离依赖的建模能力较弱。“"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片74.png', caption='图74')
+        st.image('./chapter4_NLP/pages/图片/图片74.png', caption='图74')
     """ 3.深度学习时代，部分任务中也可以[分字]"""
     """$ \qquad $ 深度学习时代，随着数据量和算例的爆炸式增长，很多传统的方法被颠覆。"""
     """$ \qquad $ 分词一直是NLP的基础，但是现在也不一定了，比如："""
@@ -177,7 +177,7 @@ with tab2:
     """- 3.中英文分词的3个典型区别"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片75.png', caption='图75')
+        st.image('./chapter4_NLP/pages/图片/图片75.png', caption='图75')
     """ 区别1：分词方式不同，中文更难"""
     """$ \qquad $ 英文有天然的空格作为分隔符，但是中文没有。所以如何切分是一个难点，再加上中文里一词多义的情况非常多，导致很容易出现歧义。"""
     """ 区别2：英文单词有多种形态"""
@@ -194,7 +194,7 @@ with tab2:
     """- 4.中文分词的3大难点"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片76.png', caption='图76')
+        st.image('./chapter4_NLP/pages/图片/图片76.png', caption='图76')
     """ 难点1：没有统一的标准"""
     """$ \qquad $ 目前中文分词没有统一的标准，也没有公认的规范。不同的公司和组织各有各的方法和规则。"""
     """ 难点2：歧义词如何切分"""
@@ -207,7 +207,7 @@ with tab2:
     """- 5.3种典型的分词方法"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片77.png', caption='图77')
+        st.image('./chapter4_NLP/pages/图片/图片77.png', caption='图77')
     """ 分词地方法大致分为3类："""
     """$ \qquad $ 1.基于词典匹配"""
     """$ \qquad \qquad $ 优点：速度快、成本低"""
@@ -251,20 +251,20 @@ with tab2:
     """ 词干提取是英文语料预处理的一个步骤（中文并不需要），而语料预处理是 NLP 的第一步，下面这张图将让大家知道词干提取在这个知识结构中的位置。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片78.png', caption='图78')
+        st.image('./chapter4_NLP/pages/图片/图片78.png', caption='图78')
     """- 2.什么是词干提取和词形还原？"""
     """ 词干提取 – Stemming"""
     """ $ \qquad $ 词干提取是去除单词的前后缀得到词根的过程。"""
     """ $ \qquad $ 大家常见的前后词缀有“名词的复数”、“进行式”、“过去分词”…"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片79.png', caption='图79')
+        st.image('./chapter4_NLP/pages/图片/图片79.png', caption='图79')
     """ 词形还原 – Lemmatisation"""
     """ $ \qquad $ 词形还原是基于词典，将单词的复杂形态转变成最基础的形态。"""
     """ $ \qquad $ 词形还原不是简单地将前后缀去掉，而是会根据词典将单词进行转换。比如“drove”会转换为“drive”。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片80.png', caption='图80')
+        st.image('./chapter4_NLP/pages/图片/图片80.png', caption='图80')
     """ 为什么要做词干提取和词形还原？"""
     """ $ \qquad $ 比如当我搜索“play basketball”时，Bob is playing basketball 也符合我的要求，，但是 play 和 playing 对于计算机来说是 2 种完全不同的东西，所以我们需要将 playing 转换成 play。"""
     """ $ \qquad $ 词干提取和词形还原的目的就是将长相不同，但是含义相同的词统一起来，这样方便后续的处理和分析。"""
@@ -272,7 +272,7 @@ with tab2:
     """- 3.词干提取和词形还原的4个相似点"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片81.png', caption='图81')
+        st.image('./chapter4_NLP/pages/图片/图片81.png', caption='图81')
     """ 1.目标一致。词干提取和词形还原的目标均为将词的屈折形态或派生形态简化或归并为词干（stem）或原形的基础形式，都是一种对词的不同形态的统一归并的过程。"""
     """ 2.结果部分交叉。词干提取和词形还原不是互斥关系，其结果是有部分交叉的。一部分词利用这两类方法都能达到相同的词形转换效果。如“dogs”的词干为“dog”，其原形也为“dog”。"""
     """ 3.主流实现方法类似。目前实现词干提取和词形还原的主流实现方法均是利用语言中存在的规则或利用词典映射提取词干或获得词的原形。"""
@@ -281,7 +281,7 @@ with tab2:
     """- 4.词干提取和词形还原的5个不同点"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片82.png', caption='图82')
+        st.image('./chapter4_NLP/pages/图片/图片82.png', caption='图82')
     """ 1.在原理上，词干提取主要是采用“缩减”的方法，将词转换为词干，如将“cats”处理为“cat”，将“effective”处理为“effect”。而词形还原主要采用“转变”的方法，将词转变为其原形，如将“drove”处理为“drive”，将“driving”处理为“drive”。"""
     """ 2.在复杂性上，词干提取方法相对简单，词形还原则需要返回词的原形，需要对词形进行分析，不仅要进行词缀的转化，还要进行词性识别，区分相同词形但原形不同的词的差别。词性标注的准确率也直接影响词形还原的准确率，因此，词形还原更为复杂。"""
     """ 3.在实现方法上，虽然词干提取和词形还原实现的主流方法类似，但二者在具体实现上各有侧重。词干提取的实现方法主要利用规则变化进行词缀的去除和缩减，从而达到词的简化效果。词形还原则相对较复杂，有复杂的形态变化，单纯依据规则无法很好地完成。其更依赖于词典，进行词形变化和原形的映射，生成词典中的有效词。"""
@@ -291,7 +291,7 @@ with tab2:
     """- 5.3种主流的词干提取算法"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片83.png', caption='图83')
+        st.image('./chapter4_NLP/pages/图片/图片83.png', caption='图83')
     """ Porter"""
     """ $ \qquad $ 这种词干算法比较旧。它是从20世纪80年代开始的，其主要关注点是删除单词的共同结尾，以便将它们解析为通用形式。它不是太复杂，它的开发停止了。"""
     """ $ \qquad $ 通常情况下，它是一个很好的起始基本词干分析器，但并不建议将它用于复杂的应用。相反，它在研究中作为一种很好的基本词干算法，可以保证重复性。与其他算法相比，它也是一种非常温和的词干算法。"""
@@ -329,7 +329,7 @@ print(lemmatizer.lemmatize("blogs"))
     """- 词性标注4种常见方法"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片84.png', caption='图84')
+        st.image('./chapter4_NLP/pages/图片/图片84.png', caption='图84')
     """ 关于词性标注的研究比较多，这里介绍一波常见的几类方法，包括基于规则的词性标注方法、基于统计模型的词性标注方法、基于统计方法与规则方法相结合的词性标注方法、基于深度学习的词性标注方法等。"""
     """ 1.基于规则的词性标注方法"""
     """$ \qquad $ 基于规则的词性标注方法是人们提出较早的一种词性标注方法，其基本思想是按兼类词搭配关系和上下文语境建造词类消歧规则。早期的词类标注规则一般由人工构建。"""
@@ -367,12 +367,12 @@ print(lemmatizer.lemmatize("blogs"))
     """ NER一直是NLP领域中的研究热点，从早期基于词典和规则的方法，到传统机器学习的方法，到近年来基于深度学习的方法，NER研究进展的大概趋势大致如下图所示。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片85.png', caption='图85')
+        st.image('./chapter4_NLP/pages/图片/图片85.png', caption='图85')
 
     """- 3.4类常见的实现方式"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片86.png', caption='图86')
+        st.image('./chapter4_NLP/pages/图片/图片86.png', caption='图86')
     """ 1.有监督的学习方法：这一类方法需要利用大规模的已标注语料对模型进行参数训练。目前常用的模型或方法包括隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决策树和条件随机场等。值得一提的是，基于条件随机场的方法是命名实体识别中最成功的方法。"""
     """ 2.半监督的学习方法：这一类方法利用标注的小数据集（种子数据）自举学习。"""
     """ 3.无监督的学习方法：这一类方法利用词汇资源（如WordNet）等进行上下文聚类。"""
@@ -386,19 +386,19 @@ with tab3:
     """ 文本表示的作用就是将这些非结构化的信息转化为结构化的信息，这样就可以针对文本信息做计算，来完成我们日常所能见到的文本分类，情感判断等任务。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片87.png', caption='图87')
+        st.image('./chapter4_NLP/pages/图片/图片87.png', caption='图87')
     """ 文本表示的方法有很多种，下面只介绍 3 类方式："""
     """$ \qquad $ 1.独热编码 | one-hot representation"""
     """$ \qquad $ 2.整数编码"""
     """$ \qquad $ 3.词嵌入 | word embedding"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片88.png', caption='图88')
+        st.image('./chapter4_NLP/pages/图片/图片88.png', caption='图88')
 
     """- $\\textbf{2.独热编码 | one-hot representation}$"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片89.png', caption='图89')
+        st.image('./chapter4_NLP/pages/图片/图片89.png', caption='图89')
     """ 但是在实际情况中，文本中很可能出现成千上万个不同的词，这时候向量就会非常长。其中99%以上都是0。"""
     """ one-hot 的缺点如下："""
     """$ \qquad $ 1.无法表达词语之间的关系"""
@@ -407,7 +407,7 @@ with tab3:
     """- $\\textbf{3.整数编码}$"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片90.png', caption='图90')
+        st.image('./chapter4_NLP/pages/图片/图片90.png', caption='图90')
     """ 将句子里的每个词拼起来就是可以表示一句话的向量。"""
     """ 整数编码的缺点如下："""
     """$ \qquad $ 1.无法表达词语之间的关系"""
@@ -421,12 +421,12 @@ with tab3:
     """$ \qquad $ 3.通用性很强，可以用在不同的任务中。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片91.png', caption='图91')
+        st.image('./chapter4_NLP/pages/图片/图片91.png', caption='图91')
 
     """- $\\textbf{5.2 种主流的 word embedding 算法}$"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片92.png', caption='图92')
+        st.image('./chapter4_NLP/pages/图片/图片92.png', caption='图92')
     """ Word2vec"""
     """$ \qquad $ 这是一种基于统计方法来获得词向量的方法，他是 2013 年由谷歌的 Mikolov 提出了一套新的词嵌入方法。"""
     """$ \qquad $ 这种算法有2种训练模式："""
@@ -440,24 +440,24 @@ with tab3:
     """$ \qquad $ CBOW通过上下文来预测当前值。相当于一句话中扣掉一个词，让你猜这个词是什么。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片93.png', caption='图93')
+        st.image('./chapter4_NLP/pages/图片/图片93.png', caption='图93')
 
     r"""$ \qquad \qquad \qquad $ CBOW模型包含3层，即输入层、映射层和输出层。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片2.png', caption='图2')
+        st.image('./chapter4_NLP/pages/图片/图片2.png', caption='图2')
     r"""$ \qquad \qquad \qquad $ CBOW模型中的w(t)为目标词，在已知它的上下文w(t-2),w(t-1),w(t+1),w(t+2)的前提下预测词w(t)出现的概率，即：p(w/context(w))。目标函数为："""
     st.latex("""L=\sum_{w\in{c}}{-logp(w|context(w))}""")
 
     """$ \qquad $ Skip-gram用当前词来预测上下文。相当于给你一个词，让你猜前面和后面可能出现什么词。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片94.png', caption='图94')
+        st.image('./chapter4_NLP/pages/图片/图片94.png', caption='图94')
 
     r"""$ \qquad \qquad \qquad $ Skip-Gram模型同样包含3层，输入层，映射层和输出层。架构如图："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片3.png', caption='图3')
+        st.image('./chapter4_NLP/pages/图片/图片3.png', caption='图3')
     r"""$ \qquad \qquad \qquad $ Skip-Gram模型中的w(t)为输出词，在已知词w(t)的前提下预测词w(t)的上下文w(t-2),w(t-1),w(t+1),w(t+2)，条件概率为：p(context(w)/w)。目标函数为："""
     st.latex(r"""L=\sum_{w\in{c}}{-logp(context(w)|(w))}""")
 
@@ -474,13 +474,13 @@ with tab3:
     """$ \qquad \qquad $ 3.通用性很强，可以用在各种NLP任务种。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片95.png', caption='图95')
+        st.image('./chapter4_NLP/pages/图片/图片95.png', caption='图95')
     """$ \qquad $ 缺点："""
     """$ \qquad \qquad $ 1.由于词和向量是一对一的关系，所以多义词的问题无法解决。"""
     """$ \qquad \qquad $ 2.Word2vec是一种静态的方式，虽然通用性很强，但是无法针对特定任务做动态优化。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片96.png', caption='图96')
+        st.image('./chapter4_NLP/pages/图片/图片96.png', caption='图96')
 
     """ GloVe"""
     """$ \qquad $ GloVe 是对 Word2vec 方法的扩展，它将全局统计和 Word2vec 的基于上下文的学习结合了起来。"""
@@ -490,7 +490,7 @@ with tab4:
     """- 词向量是对字典D中的任意词w,指定一个固定长度的实值向量：$𝑣(𝑤)\in{𝑅^𝑚}$,$𝑣(𝑤)$就称为w的词向量，m为词向量的长度。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片1.jpg', caption='图1 中文文本处理的一般步骤')
+        st.image('./chapter4_NLP/pages/图片/图片1.jpg', caption='图1 中文文本处理的一般步骤')
     """- 语音识别已经成为了全民级的引用，微信里可以语音转文字，汽车中使用导航可以直接说目的地，老年人使用输入法也可以直接语音而不用学习拼音…"""
     """- 语音识别和生成：语音识别是将输入计算机的语音符号识别转换成书面语表示。语音生成又称文语转换、语音合成，它是指将书面文本自动转换成对应的语音表征。"""
 

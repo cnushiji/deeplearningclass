@@ -13,42 +13,42 @@ r"""$ \qquad $ 2）其次，它不是类似RNN的顺序结构，因此具有更�
 """- 在机器翻译中，Transformer可概括为如图："""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片22.png', caption='图22')
+    st.image('./chapter4_NLP/pages/图片/图片22.png', caption='图22')
 """- Transformer本质上是一个Encoder-Decoder的结构，那么图22可以表示为图23的结构："""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片23.png', caption='图23')
+    st.image('./chapter4_NLP/pages/图片/图片23.png', caption='图23')
 """- Transformer的Encoder和Decoder均由6个block堆叠而成。"""
 col1, col2 = st.columns([1, 1])
 with col1:
-    st.image('./pages/图片/图片24.png', caption='图24')
+    st.image('./chapter4_NLP/pages/图片/图片24.png', caption='图24')
 with col2:
-    st.image('./pages/图片/图片25.png', caption='图25')
+    st.image('./chapter4_NLP/pages/图片/图片25.png', caption='图25')
 st.latex(r"""Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V""")
 st.latex(r"""FFN(Z)=max(0,ZW_1+b_1)W_2+b_2""")
 """- 输入编码："""
 r"""$ \qquad $ 首先通过Word2Vec等词嵌入方法将输入语料转化成特征向量。"""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片26.png', caption='图26')
+    st.image('./chapter4_NLP/pages/图片/图片26.png', caption='图26')
 """$ \qquad $ 输入编码作为一个tensor输入到encoder中"""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片27.png', caption='图27')
+    st.image('./chapter4_NLP/pages/图片/图片27.png', caption='图27')
 
 """- self-Attention:"""
 r"""$ \qquad $ 在self-attention中，每个单词由3个不同的向量，分别是Query向量（Q）,Key向量(K)和Value向量(V),长度均是64.它们是通过3个不同的权值矩阵$𝑊^𝑄,𝑊^𝐾,𝑊^𝑉$得到，其中三个矩阵的尺寸也是相同的。均是512×64。"""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片28.png', caption='图28 Q,K,V的计算示例图')
+    st.image('./chapter4_NLP/pages/图片/图片28.png', caption='图28 Q,K,V的计算示例图')
 col1, col2 = st.columns([1, 1])
 with col1:
-    st.image('./pages/图片/图片29.png', caption='图29 Self-Attention计算示例图')
+    st.image('./chapter4_NLP/pages/图片/图片29.png', caption='图29 Self-Attention计算示例图')
 with col2:
-    st.image('./pages/图片/图片30.png', caption='图30 Q,K,V的矩阵表示')
+    st.image('./chapter4_NLP/pages/图片/图片30.png', caption='图30 Q,K,V的矩阵表示')
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片31.png', caption='图31 Self-Attention的矩阵表示')
+    st.image('./chapter4_NLP/pages/图片/图片31.png', caption='图31 Self-Attention的矩阵表示')
 st.latex(r"""Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V""")
 
 """- why self-Attention ?"""
@@ -57,33 +57,33 @@ r"""$ \qquad $ 2. the amout of computation can be parallelized """
 r"""$ \qquad $ 3. path length between long-range dependencies in the network"""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片32.png', caption='图32')
+    st.image('./chapter4_NLP/pages/图片/图片32.png', caption='图32')
 """- 残差结构:"""
 r"""$ \qquad $ Self-attention需要强调的最后一点是其采用了残差网络中的short-cut结构，目的当然是解决深度学习中的退化问题，得到的最终的结果如图："""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片33.png', caption='图33')
+    st.image('./chapter4_NLP/pages/图片/图片33.png', caption='图33')
 """- Multi-Head Attention:"""
 r"""$ \qquad $ Multi-Head Attention相当于h个不同的self-attention的集成（ensemble）如图所示："""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片34.png', caption='图34')
+    st.image('./chapter4_NLP/pages/图片/图片34.png', caption='图34')
 """- Encoder-Decoder Attention:"""
 r"""$ \qquad $ 在解码器中，Transformer block比编码器中多了个encoder-decoder attention。在encoder-decoder attention中，Q来自于解码器的上一个输出，K和V则来自于编码器的输出。"""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片35.png', caption='图35')
+    st.image('./chapter4_NLP/pages/图片/图片35.png', caption='图35')
 """- Transformer:"""
 r"""$ \qquad $ 一个完整可训练的网络结构是encoder和decoder的堆叠（各N各，N=6）,完整的Transformer结构："""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片36.png', caption='图36')
+    st.image('./chapter4_NLP/pages/图片/图片36.png', caption='图36')
 """- 位置编码（Position Embedding）:"""
 r"""$ \qquad $ 位置编码会在词向量中加入了单词的位置信息，这样Transformer就能区分不同位置的单词。"""
 r"""$ \qquad $ 通常位置编码是一个长度为𝑑_𝑚𝑜𝑑𝑒𝑙的特征向量，这样便于和词向量进行单位加的操作，如图："""
 _, col1, _ = st.columns([1, 4, 1])
 with col1:
-    st.image('./pages/图片/图片37.png', caption='图37')
+    st.image('./chapter4_NLP/pages/图片/图片37.png', caption='图37')
 """- 优缺点："""
 r"""$ \qquad $ 1.优点："""
 r"""$ \qquad \qquad $ 1）设计足够创新，抛弃了在NLP中最根本的RNN或CN并取得了非常不错的效果。"""

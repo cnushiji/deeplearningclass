@@ -38,38 +38,38 @@ with tab1:
     r"""$ \qquad $ 分类需要先找到数据样本点中的分界线，再根据分界线对新数据进行分类，分类数据是离散的值，比如图片识别、情感分析等领域会经常用到分类任务。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片5.jpg', caption='图5')
+        st.image('./chapter2_MLP/pages/图片/图片5.jpg', caption='图5')
 
     """- 二分类任务："""
     r"""$ \qquad $ 二分类任务是指具有两个类别标签分类任务。"""
     r"""$ \qquad $ 例如：垃圾邮件检测（是否为垃圾邮件），客户流失预测（是否流失），客户购买欲预测（购买或不购买）。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片1.png', caption='图1')
+        st.image('./chapter2_MLP/pages/图片/图片1.png', caption='图1')
     """- 多分类任务："""
     r"""$ \qquad $ 多类别分类是指具有两个以上类别标签的分类任务。"""
     r"""$ \qquad $ 例如：人脸识别分类，植物种类分类，手写数字识别分类"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片2.png', caption='图2')
+        st.image('./chapter2_MLP/pages/图片/图片2.png', caption='图2')
     """- 多标签分类任务："""
     r"""$ \qquad $ 多标签分类是指具有两个或多个分类标签的分类任务，其中每个示例可以预测一个或多个分类标签。"""
     r"""$ \qquad $ 例如：每个输入样本都有两个输入特征。一共有三个类别，每个类别可能带有两个标签（0或1）之一。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片3.png', caption='图3')
+        st.image('./chapter2_MLP/pages/图片/图片3.png', caption='图3')
     """- 样本不平衡分类任务："""
     r"""$ \qquad $ 样本不平衡分类是指分类任务，其中每个类别中的示例数不均匀分布。通常，不平衡分类任务是二分类任务，其中训练数据集中的大多数示例属于正常类，而少数示例属于异常类。"""
     r"""$ \qquad $ 例如：欺诈识别，离群值检测，肺炎识别"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片4.png', caption='图4')
+        st.image('./chapter2_MLP/pages/图片/图片4.png', caption='图4')
 
     """- 任务——回归"""
     r"""$ \qquad $ 回归是对已有的数据样本点进行拟合，再根据拟合出来的函数，对未来进行预测。回归数据是连续的值，比如商品价格走势的预测就是回归任务。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片6.png', caption='图6')
+        st.image('./chapter2_MLP/pages/图片/图片6.png', caption='图6')
     """- 分类任务与回归任务的区别——需要预测的值的类型"""
     r"""$ \qquad $ 回归任务，是对 连续值 进行预测（比如 多少）"""
     r"""$ \qquad $ 分类任务，是对 离散值 进行预测（比如 是不是，属不属于，或者 属于哪一类）"""
@@ -117,7 +117,7 @@ with tab3:
     r"""$ \qquad \qquad $ True negatives(TN)：真负，实际为负例但被分类器划分为负例的实例数（划分正确）。"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片7.png', caption='图7')
+        st.image('./chapter2_MLP/pages/图片/图片7.png', caption='图7')
 
     """$ \qquad $ 2.准确率： """
     r"""$ \qquad \qquad $ 准确率是分类器分类正确的样本数量与样本总数的比。"""
@@ -171,12 +171,12 @@ H是系统的预测函数，也称为假设。当系统受到一个实例的特�
     r"""$ \qquad $ 欠拟合：模型不能够在训练集上获得足够低的误差，不能够很好的拟合训练数据。"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片8.png', caption='图8')
+        st.image('./chapter2_MLP/pages/图片/图片8.png', caption='图8')
     """- 过拟合："""
     r"""$ \qquad $ 训练误差和测试误差的差距太大，泛化性能不好。"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片9.png', caption='图9')
+        st.image('./chapter2_MLP/pages/图片/图片9.png', caption='图9')
 
     """- 如何解决欠拟合？"""
     r"""$ \qquad $ 不断训练：欠拟合基本都会发生在训练刚开始的时候。"""

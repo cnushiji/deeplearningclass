@@ -11,7 +11,7 @@ st.markdown(
     <h1></h1>
     <h1></h1>
     <h1 font="15">
-    <center>Lecture1 课程介绍与深度学习概述</center>
+    <center>Lecture1 深度学习概览</center>
     </h1>
     </body>
     """, unsafe_allow_html=True)

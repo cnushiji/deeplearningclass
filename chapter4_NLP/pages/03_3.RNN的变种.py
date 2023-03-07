@@ -16,11 +16,11 @@ with tab1:
     """- LSTM可以保留长序列数据中的重要信息，忽略不重要的信息。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片19.png', caption='图19')
+        st.image('./chapter4_NLP/pages/图片/图片19.png', caption='图19')
     """- 长短时记忆神经网络（Long Short-Term Memery,LSTM）最早由Hochreiter & Schmidhuber于1997年提出，能够有效解决信息的长期依赖，避免梯度消失或爆炸。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片20.jpg', caption='图20')
+        st.image('./chapter4_NLP/pages/图片/图片20.jpg', caption='图20')
 
 with tab2:
     """- 在有些任务中，一个时刻的输出不但和过去时刻的信息有关，也和后续时刻的信息有关。"""
@@ -34,6 +34,6 @@ with tab2:
     r"""$ \qquad $ 其中$\bigoplus$为向量拼接操作。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片21.png', caption='图21 按时间展开的双向循环神经网络')
+        st.image('./chapter4_NLP/pages/图片/图片21.png', caption='图21 按时间展开的双向循环神经网络')
     """1.采用Bi-RNN能提升模型效果。百度语音识别就是通过Bi-RNN综合上下文语境，提升模型准确率。"""
     """2.双向循环神经网络的基本思想是提出每一个训练序列向前和向后分别是两个循环神经网络（RNN），而且这两个都连接着一个输出层。这个结构提供给输出层输入序列中每一个完整的过去和未来的上下文信息。"""

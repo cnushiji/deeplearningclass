@@ -10,7 +10,7 @@ with tab1:
     """扩散模型(diffusion model)属于无监督生成模型。下面我们给出研究至今的生成模型的分类："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片118.jpg', caption='图118 生成模型分类')
+        st.image('./chapter5_GM/pages/图片/图片118.jpg', caption='图118 生成模型分类')
     """ 它们的不同在于建模方式，GAN对复杂分布的抽样过程建模并以对抗性的方式进行学习；自回归模型、正则化流和变分自动编码器（VAEs）基于”似然性“，对观察到的数据样本学习到一个分配高似然性的模型。"""
     """ 第3种是基于能量的建模，一个分布被学习为一个任意灵活的能量函数，再被正则化。基于分数的生成模型与之高度相关，具体地，不是学习建模能量函数本身，而是学习一个基于能量的模型的分数作为神经网络。"""
 
@@ -39,7 +39,7 @@ with tab1:
     """- $\\textbf{总之，以上3个限制描述的是图像输入随时间推移的稳定噪声，我们通过添加高斯噪声（也可以是其它噪声）逐步破坏图像，知道它变成一个标准高斯噪声。}$从视觉上看，如图所示："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片119.png', caption='图119')
+        st.image('./chapter5_GM/pages/图片/图片119.png', caption='图119')
     """ 如图所示，每个$q(x_t|x_{t-1})$被建模为一个高斯分布，它使用前一个状态的输出作为其平均值。"""
 
     """ 注意，$q(x_t|x_{t-1})$不再被$\phi$参数化，因为它们被完全建模为高斯分布，在每个时间步长都定义好了均值和方差。因此，只对学习条件$p_{\theta}(x_{t-1}|x_t)$感兴趣，可以模拟新的数据。
@@ -59,7 +59,7 @@ with tab1:
     """ VDM的优化推导："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片120.png', caption='图120')
+        st.image('./chapter5_GM/pages/图片/图片120.png', caption='图120')
     """$ \qquad $ 1.$E_{q(x_1|x_0)}[logp_{\\theta}(x_0|x_1)]$是重建项，给定第1步潜码$x_1$，预测原始数据样本的对数概率。"""
     """$ \qquad $ 2.$E_{q(x_{T-1})[D_{KL}(q(X_T)|x_{T-1})||p(x_T)]}$是先验匹配项。它是利用$q(x_{T-1}|x_0)=q(x_{T-1}|x_{T-2})$和KL散度公式计算得出。当最终的潜在分布与高斯先验相匹配时，它被最小化。这项不需要优化，因它没有可训练的参数。如果T足够大，这项会变成0."""
     """$ \qquad $ 3.$E_{q(x_{t-1},x_{t+1}|x_0)}[D_{KL}(q(x_t|x_{t-1})||p_{\\theta}(x_t|x_{t+1}))]$是一致性项。跟2一样，利用$q(x_{T-1}|x_0)=q(x_{T-1}|x_{T-2})$和KL散度公式计算得出。它促进正向过程和反向过程的$x_t$处的分布一致。即对于每个中间时间步，去噪步中的噪声图像应与相应时间步的从干净图像得到的去噪图像一致，数学上用KL散度促进一致性。当我们训练这两项一致时，该项被最小化。"""
@@ -67,7 +67,7 @@ with tab1:
     """$ \qquad $ 从视觉上看，这种解释如图所示："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片121.png', caption='图121')
+        st.image('./chapter5_GM/pages/图片/图片121.png', caption='图121')
     """$ \qquad $ 优化VDM的成本主要在第3项上，因为我们必须优化所有的时间步长。"""
 
     """ $\\textbf{我们刚刚推导出的VDM的优化可能是次优的，因为一致性项基第3项是对每个时间步的两个随机变量求期望，它的蒙特卡洛估计的方差可能高于每个时间步只使用一个随机变量的项。又它是将T-1个一致性项相加得到，这对于充分大的T,VDM的最终估计可能有较大的方差。}$"""
@@ -80,10 +80,10 @@ with tab1:
     """ 如此，我们可以重写优化1中的推到："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片122.png', caption='图122')
+        st.image('./chapter5_GM/pages/图片/图片122.png', caption='图122')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片123.png', caption='图123')
+        st.image('./chapter5_GM/pages/图片/图片123.png', caption='图123')
     """$ \qquad $ 1.$E_{q(x_1|x_0)}[logp_{\\theta}(x_0|x_1)]$是重建项，这个项可以用蒙特卡洛估计进行估计和近似。"""
     """$ \qquad $ 2.$D_{KL}(q(x_T|x_0)||p(x_T))$表示最终的噪声输入分布与标准高斯先验的接近程度。它也没有可训练的参数，故可以假设为0。"""
     """$ \qquad $ 3.$E_{q(x_t|x_0)}[D_{KL}(q(x_{t-1}|x_t,x_0))]$是去噪匹配项，$q(x_{t-1}|x_t,x_0)$是地面真值转换步，这个过度步骤可以作为地面真值信号，因为它定义了应该如何去噪噪声图像$x_t$才能到达最终的完全去噪的$x_0$。因此当两个去噪步匹配时，这项的KL散度是最小化的。"""
@@ -103,14 +103,14 @@ with tab1:
     """$ \qquad $ 接下来我们对$q(x_t|x_0)$应用重参数化技巧。假设我们可以访问2T个随机噪声变量$\left\{\epsilon^{*}_t,\epsilon_t \\right\}_{t=0}^T \overset{iid} \sim{N(\epsilon;0,I)}$,于是对任意样本$x_t\sim{q(x_t|x_0)}$，我们可以将它重写为："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片124.png', caption='图124')
+        st.image('./chapter5_GM/pages/图片/图片124.png', caption='图124')
     """$ \qquad $ 其中，我们利用了两个独立的高斯随机变量的和仍然是一个高斯分布的事实，其中均值是两个均值的和，方差是这两个方差的和。将$\sqrt{1-\\alpha_t}\epsilon_{t-1}^{*}$解释为高斯分布$N(0,(1-\\alpha_t)I)$的一个样本，将$\sqrt{\\alpha_t-\\alpha_t{\\alpha_{t-1}}}\epsilon_{t-2}^{*}$看作高斯分布$N(0,(1-\\alpha_t-\\alpha_t{\\alpha_{t-1}})I)$的样本，然后我们可以将它们的和
     看作一个从高斯分布$N(0,(1-\\alpha_t+\\alpha_t-\\alpha_t{\\alpha_{t-1}})I)=N(0,(1-\\alpha_t{\\alpha_{t-1}})I)$中采样的随机变量。然后这个分布的样本可以使用重参数化技巧表示为：$\sqrt{1-\\alpha_t{\\alpha_{t-1}}}\epsilon_{t-2}$。"""
     """- 至此，我们推导出了$q(x_t|x_0)$的高斯形式。同理，我们也可以得到$q(x_{t-1}|x_0)}$的高斯重参数化形式。"""
     """ 现在贝叶斯公式所需的3个形式都得到，接下来替换贝叶斯形式如下："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片125.png', caption='图125')
+        st.image('./chapter5_GM/pages/图片/图片125.png', caption='图125')
     """$ \qquad $ 其中，$C(x_t,x_0)$是关于$x_{t-1}$的常数项。"""
     """- 至此已经证明了每一个时间步，$x_{t-1}\sim{q(x_{t-1}|x_t,x_0)}$是正态分布的，均值$\mu_q(x_t,x_0)$是$x_t$和$x_0$的函数，方差$\sum_q(t)$是$\\alpha$系数的函数。这些$\\alpha$系数在每个时间步是固定的和已知的。当它们被建模为超参数时，要么是永久设置的，要么被认为是一个网络建模它们时的当前输出。"""
     """$ \qquad $ 根据$\sum_q(t)$，可以将方差重写为$\sum_q(t)=\sigma_q^2(t)I$，其中"""
@@ -128,7 +128,7 @@ with tab1:
     """$ \qquad $ 我们可以将2个高斯分布的方法精确匹配，将优化KL散度简化为最小化两个分布的平均值之间的差异。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片126.png', caption='图126')
+        st.image('./chapter5_GM/pages/图片/图片126.png', caption='图126')
     """$ \qquad $ 我们想要优化$\mu_{\\theta}(x_t,t)$匹配$\mu_q(x_t,x_0)$。从图125中可得二者的形式："""
     st.latex(r"""
     \mu_q(x_t,x_0)=\frac{\sqrt{\alpha_t}(1-\bar{\alpha}_{t-1})x_t+\sqrt{\bar{\alpha}_{t-1}}(1-\alpha_t)x_0}{1-\bar{\alpha}_t}
@@ -140,7 +140,7 @@ with tab1:
     """$ \qquad $ 其中，$\hat{x}_{\\theta}(x_t,t)$是由一个神经网络参数化，该神经网络试图从有噪声的图像$x_T$和时间步t中预测$x_0$。然后，将优化问题简化为："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片127.png', caption='图127')
+        st.image('./chapter5_GM/pages/图片/图片127.png', caption='图127')
     """$\\textbf{因此，优化VDM相当于学习一个能从任意噪声版本预测原始地面真值图像的神经网络。}$"""
     """- 同时VDM优化目标2可以被它的去噪匹配项近似。于是VDM优化目标进一步表示为："""
     st.latex(r"""
@@ -153,7 +153,7 @@ with tab1:
     """ 方法2.将方差方程$\sigma_q^2(t)$代入每个时间不长的优化目标："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片128.png', caption='图128')
+        st.image('./chapter5_GM/pages/图片/图片128.png', caption='图128')
     """$ \qquad $ 回想，$q(x_t|x_0)=N(x_t;\sqrt{bar{\\alpha}_t}x_0,(1-\\bar{\\alpha}_t)I)$。然后根据信噪比的定义$SNR=\\frac{\mu^2}{\sigma^2}$，我们可以将在每个时间步t的SNR写为："""
     st.latex(r"""
     SNR(t)=\frac{\bar{\alpha}_t}{1-\bar{\alpha}_t}
@@ -182,7 +182,7 @@ with tab1:
     """$ \qquad $ 将其代入我们之前推导的地面真值去噪转移均值$\mu_q(x_t,x_0)$中，可以得到："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片129.png', caption='图129')
+        st.image('./chapter5_GM/pages/图片/图片129.png', caption='图129')
     """ 因此，我们可以将近似去噪转移均值$\mu_{\\theta}(x_t,t)$设为："""
     st.latex(r"""
     \mu_{\theta}(x_t,t)=\frac{1}{\sqrt{\alpha}_t}x_t-\frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}\sqrt{\alpha_t}}\hat{\epsilon}_{\theta}(x_t,t)
@@ -190,7 +190,7 @@ with tab1:
     """$ \qquad $ 然后，相应的优化问题变为："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片130.png', caption='图130')
+        st.image('./chapter5_GM/pages/图片/图片130.png', caption='图130')
     """$ \qquad $ 这里，$\hat{\epsilon}(x_t,t)$是一个神经网络，它学习预测能从$x_0$决定$x_t$的源噪声$\epsilon_0\sim{N(\epsilon;0,I)}$。"""
     """- 因此，我们证明了通过预测原始图像$x_0$学习VDM相当于学习预测噪声。在实际工作中也发现，预测噪声会导致更好的性能。"""
 
@@ -214,7 +214,7 @@ with tab1:
     """$ \qquad $ 然后，将新得到的$x_0$代入我们的地面真值去噪变换均值$\mu_q(x_t,x_0)$，进行推导："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片131.png', caption='图131')
+        st.image('./chapter5_GM/pages/图片/图片131.png', caption='图131')
 
     """$ \qquad $ 因此，我们可以设定我们的近似去噪转移均值$\mu_{\\theta}(x_t,t)$为："""
     st.latex(r"""
@@ -223,12 +223,12 @@ with tab1:
     """$ \qquad $ 然后，相应的优化问题变为："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片132.png', caption='图132')
+        st.image('./chapter5_GM/pages/图片/图片132.png', caption='图132')
     """$ \qquad $ 这里，$s_{\\theta}(x_t,t)$是一个神经网络，它学习预测分数函数$\\nabla_{x_t}logp(x_t)$，它是数据空间中的$x_t$对于任何任意噪声水平t的梯度。"""
     """$ \qquad $ 到此为止，有人应该看出分数函数$\\nabla{logp(x_t)}$看起来与源噪声$\epsilon$在形式上非常相似。这可以结合Tweedie的公式和重参数化技巧显示："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片133.png', caption='图133')
+        st.image('./chapter5_GM/pages/图片/图片133.png', caption='图133')
     """$ \qquad $ 通过证明，这两项被一个随时间变化的常数因子抵消了。分数函数测量如何在数据空间中移动以最大化对数概率。即，由于源噪声被添加到自然图像中以破坏它，向相反的方向移动会“去噪”图像。这个方向是对对数概率的正确的更新。即以上公式已经证明，学习对分数函数进行建模等价于建模源噪声的赋值（相对于一个比例因子）。"""
 
     """- 综上，我们推导了三个等效的目标来优化VDM:1.学习一个神经网络来预测原始图像$x_0$、源噪声$\epsilon_0$、或图像在任意噪声水平下的分数$\\nabla{logp(x_t)}$。该VDM可以通过随机采样时间步长t和利用地面真实目标最小化预测的范数来进行可伸缩性的训练。"""
@@ -244,7 +244,7 @@ with tab1:
     """$ \qquad $ 因此，可以使用神经网络$s_{\\theta}(x)$来学习分布p(x)的分数函数$\\nabla{logp(x)}$。这个想法来自于："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片134.png', caption='图134')
+        st.image('./chapter5_GM/pages/图片/图片134.png', caption='图134')
     """$ \qquad $ 它可以自由地表示为神经网络，没有任何正则化常数。分数模型可以通过使用地面真实分数函数最小化Fisher散度来进行优化："""
     st.latex(r"""
     E_{p(x)}[\Vert s_{\theta}(x)-\nabla{logp(x)} \Vert_2^2]
@@ -255,7 +255,7 @@ with tab1:
     """ 直观地说，分数函数在数据x所在的整个空间上定义了一个向量场，指向modes。从视觉上看，如图所示："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片135.png', caption='图135')
+        st.image('./chapter5_GM/pages/图片/图片135.png', caption='图135')
     """$ \qquad $ 通过学习真实数据分布的得分函数，我们可以从同一空间中的任意一点开始，迭代地跟踪得分，知道达到一个 mode。这个采样过程被称之为朗之万动力学，在数学上被描述为："""
     st.latex(r"""
     x_{i+1} \leftarrow{x_i+c\nabla{logp(x_i)}+\sqrt{2c}\epslon}, i=1,1,..,K
@@ -280,31 +280,31 @@ with tab2:
     """$ \qquad $ Diffusion模型的数据生成过程带有十分朴素的思想，一个信号（图片 音频等）从某一个分布中采样后，经过无数次添加高斯噪声，最终能成为一个服从$N(0,I)$的真正的高斯分布，即$x_T\sim{N(0,I)}$，同时我们假设$x_{t-1}$的分布可以从$x_t$中得到，他们之前关系如下"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片76.png', caption='图76')
+        st.image('./chapter5_GM/pages/图片/图片76.png', caption='图76')
     """$ \qquad $ 同时我们假设x的采样过程为:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片77.webp', caption='图77')
+        st.image('./chapter5_GM/pages/图片/图片77.webp', caption='图77')
     """$ \qquad $ $x_t$相对$x_{t-1}$的条件分布为由$\\beta_t$参数化的高斯分布:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片78.png', caption='图78')
+        st.image('./chapter5_GM/pages/图片/图片78.png', caption='图78')
     """$ \qquad $ 我们希望进行极大似自然估计$MLE(\\theta;p_{\\theta}(x_0))$，也就是最小化:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片79.png', caption='图79')
+        st.image('./chapter5_GM/pages/图片/图片79.png', caption='图79')
     """$ \qquad $ 通过Jensen不等式 我们可以得到对convex function $E[f(X)]\ge{f(EX)}$"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片80.png', caption='图80')
+        st.image('./chapter5_GM/pages/图片/图片80.png', caption='图80')
     """$ \qquad $ 这一形式和VAE中的变分下界是等价的，只不过下面的式子中的变分下界的z被替换成了$x_{1:T}$"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片81.png', caption='图81')
+        st.image('./chapter5_GM/pages/图片/图片81.png', caption='图81')
     """$ \qquad $ 为了让$L_{MLE}$的上界$L_{VLB}$更容易被优化我们可以对其进行进一步的整理，写成条件概率KL散度的形式"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片82.png', caption='图82')
+        st.image('./chapter5_GM/pages/图片/图片82.png', caption='图82')
     """$ \qquad $ 为了求解$L_{VLB}$首先我们需要推导$q(x_t|x_0)$"""
     """$ \qquad $ 令$\\alpha_t=1-\\beta_t\\bar{\\alpha}_t=\Pi_{i=1}^T{\\alpha_i}$"""
     """$ \qquad $ 我们已知$q(x_t|x_{t-1})=N(x_t;\sqrt{1-\\beta_t}x_{t-1},\\beta{I})$"""
@@ -313,55 +313,55 @@ with tab2:
     """$ \qquad $ z是从$N(0,I)$中采样得到的,因此"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片83.png', caption='图83')
+        st.image('./chapter5_GM/pages/图片/图片83.png', caption='图83')
     """$ \qquad $ 可以得到条件分布"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片84.png', caption='图84')
+        st.image('./chapter5_GM/pages/图片/图片84.png', caption='图84')
     """$ \qquad $ 接下来，推导可得"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片85.png', caption='图85')
+        st.image('./chapter5_GM/pages/图片/图片85.png', caption='图85')
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.image('./pages/图片/图片86.png', caption='图86')
+        st.image('./chapter5_GM/pages/图片/图片86.png', caption='图86')
     with col2:
-        st.image('./pages/图片/图片87.png', caption='图87')
+        st.image('./chapter5_GM/pages/图片/图片87.png', caption='图87')
     """$ \qquad $ 其中,"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片88.png', caption='图88')
+        st.image('./chapter5_GM/pages/图片/图片88.png', caption='图88')
     """$ \qquad $ 如果写成高斯分布的形式,可以得到"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片89.png', caption='图89')
+        st.image('./chapter5_GM/pages/图片/图片89.png', caption='图89')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片90.png', caption='图90')
+        st.image('./chapter5_GM/pages/图片/图片90.png', caption='图90')
     """$ \qquad $ 的每一项都可以写成关于的函数，此时可以通过从中采样x来实现损失函数的计算。"""
 
 with tab3:
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片91.png', caption='图91')
+        st.image('./chapter5_GM/pages/图片/图片91.png', caption='图91')
     """$ \qquad $ 其中$L_T$因为不带有任何科学系的参数，是常数可以忽略不计。"""
     """$ \qquad $ 对于$L_i,i=1,...,T-1$，这一损失函数的形式过于复杂，首先改变$p_{\\theta}(x_{t-1}|x_t)$的建模方式,变成:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片92.png', caption='图92')
+        st.image('./chapter5_GM/pages/图片/图片92.png', caption='图92')
     """$ \qquad $ 因为对于两个多维高斯来说KL散度为:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片93.png', caption='图93')
+        st.image('./chapter5_GM/pages/图片/图片93.png', caption='图93')
     """$ \qquad $ 令$\sum_{\\theta}=\sigma_t^2I$,我们可以简化损失函数为"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片94.png', caption='图94')
+        st.image('./chapter5_GM/pages/图片/图片94.png', caption='图94')
     """$ \qquad $ 从而得到"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片95.png', caption='图95')
+        st.image('./chapter5_GM/pages/图片/图片95.png', caption='图95')
     """$ \qquad $ 最后训练过程变成了:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片96.png', caption='图96')
+        st.image('./chapter5_GM/pages/图片/图片96.png', caption='图96')

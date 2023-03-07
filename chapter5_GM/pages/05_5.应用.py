@@ -9,7 +9,7 @@ with tab1:
     """-  GAN生成数字"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片103.png', caption='图103')
+        st.image('./chapter5_GM/pages/图片/图片103.png', caption='图103')
     """-  主要用的库："""
     """ $ \qquad $ os模块用来对本地文件读写程序、查找等文件操作。"""
     """ $ \qquad $ numpy模块用来矩阵和数据的运算处理，其中也包括和深度学习框架之间的交互等。"""
@@ -248,12 +248,12 @@ with tab2:
     """- 目标：将由RGB传感器捕获的源参与者的面部表情在线转移到目标参与者。在这之前的大都是离线转移方法"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片104.png', caption='图104')
+        st.image('./chapter5_GM/pages/图片/图片104.png', caption='图104')
     """- 贡献：实时monocular面部再现。"""
     """- 面部再现的意义：它是各种应用的基础，如在视频会议中，源视频可以被调整为匹配翻译的面部动作，或者面部视频可以配音成外语等等。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片105.png', caption='图105 方法概述')
+        st.image('./chapter5_GM/pages/图片/图片105.png', caption='图105 方法概述')
     """- 1.密集、全局和非刚性的基于模型的绑定"""
     """- 2.在无约束的实时RGB视频中的精确的跟踪、外观和 lighting估计"""
     """- 3.使用用子空间变形的依赖于人的表达转移"""
@@ -275,13 +275,13 @@ with tab2:
     """ 给定一个monocular输入序列，使用一个变分优化重构所有未知参数P。所提出的目标是高度非线性的，具有以下组成部分："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片106.png', caption='图106')
+        st.image('./chapter5_GM/pages/图片/图片106.png', caption='图106')
     """ 其中，数据项用photo一致性$E_{col}$和面部特征对齐$E_{lan}$来衡量合成图像和数据数据之间的相似性。统计正则化器$E_{reg}$考虑了给定参数向量P的可能性。权重$w_{col},w_{lan},w_{reg}$平衡了3个不同的子目标。"""
     """$ \qquad $ 子目标1——Photo一致性"""
     """$ \qquad $ 为了量化合成图像对输入数据的解释程度，我们测量了像素级上的photo-metric对齐误差："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片107.png', caption='图107')
+        st.image('./chapter5_GM/pages/图片/图片107.png', caption='图107')
     """$ \qquad $ 其中，$C_S$是合成图像，$C_I$是输入的RGB图像，$p\in{V}$表示$C_S$中所有可见的像素位置。
     使用$l_{2,1}-$范数而不是最小二乘公式来对异常值具有鲁棒性。在场景中，颜色空间中的距离是基于$l_2$的;而在所有像素的求和中，使用一个$l_1-$范数来加强稀疏性。"""
 
@@ -289,21 +289,21 @@ with tab2:
     """$ \qquad $ 文章还加强了在RGB流中检测到的一组显著的面部特征点对之间的特征相似性："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片108.png', caption='图108')
+        st.image('./chapter5_GM/pages/图片/图片108.png', caption='图108')
     """$ \qquad $ 文章采用了面部地标跟踪算法。每个特征点$f_j\in{F}\subset{R^2}$都有一个检测置信度$w_{conf,j}$，并对应于我们的面部先验的唯一顶点$v_j=M_{geo}(\\alpha,\delta)\in{R^3}$,这有助于避免$E_{col}(p)$在高度复杂的能量landscape中的局部最小值。"""
 
     """$ \qquad $ 子目标3——统计正则化"""
     """$ \qquad $ 基于一个正太分布的总体假设，加强了合成的faces的合理性。为此，强制这些参数在统计学上接近于平均值："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片109.png', caption='图109')
+        st.image('./chapter5_GM/pages/图片/图片109.png', caption='图109')
     """$ \qquad $ 这种常用的正则化策略可以防止人脸几何形状和反射率的退化，并指导局部最小的优化策略。"""
 
     """ 3.数据并行优化策略"""
     """$ \qquad $ 所提出的鲁棒跟踪目标是一个一般的无约束非线性优化问题。使用一种新的基于数据并行gpu的Iteratively Reweighted Least Squares（IRLS）求解器来实时最小化这个目标。IRLS的关键思想是，在每次迭代中，通过将范数分成两个分量，将问题转化为一个非线性最小二乘问题："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片110.png', caption='图110')
+        st.image('./chapter5_GM/pages/图片/图片110.png', caption='图110')
     """$ \qquad $ 其中，$r(\cdot)$是一个一般的残差，$P_{old}$是在最后一次迭代中计算出的解。每单个迭代步都是使用Gauss-Newton方法实现的。
     在每次IRLS迭代中采用单步GN，基于PCG求解相应的正规方程组$J^TJ\delta^{*}=-J^TF$，得到最优线性参数更新$\delta^{*}$。"""
 
@@ -321,11 +321,11 @@ with tab2:
     $V=[v_{i_1}-v_{i_0},v_{i_2}-v_{i_0}],\hat{V}=[v_{i_1}-\hat{v}_{i_0},v_{i_2}-\hat{v}_{i_0}]$，则最优的未知目标变形$\delta^T$为如下公式的最小值："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片111.png', caption='图111')
+        st.image('./chapter5_GM/pages/图片/图片111.png', caption='图111')
     """ 可以重写为标准的最小二乘形式："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片112.png', caption='图112')
+        st.image('./chapter5_GM/pages/图片/图片112.png', caption='图112')
     """$ \qquad $ 其中，矩阵$A\in{R^{6|F|\\times{76}}}$是常数，包含投影到表达式子空间的模板网格的边缘信息。在中性表情中目标的边缘信息包括在右手边的$b\in{R^{f|F|}}$。b随着$\delta^S$的变化而变化，并在每个新的输入帧的GPU上计算。
     二次能量的正态方程可以求出最小值。由于系统矩阵是常数的，我们可以用奇异值分解（SVD）来预先计算它的伪逆。
     随后，实时求解了小型的76×76线性系统。因为弯曲形状模型隐式地将结果限制在可信的形状，并保证平滑性。"""
@@ -336,25 +336,25 @@ with tab2:
     """ 为了加强时间一致性，我们使用一个密集的外观图来找到最后检索到的嘴帧和目标嘴帧之间的折衷方案。如图："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片113.png', caption='图113')
+        st.image('./chapter5_GM/pages/图片/图片113.png', caption='图113')
     """$ \qquad $ 1.相似性度量"""
     """$ \qquad $ 文章的相似度度量基于几何和photometric 特征。一个帧的$K=\left{ R,\delta,F,L \\right}$是由旋转R，表情参数$\delta$，lansmarks F和局部二进制模式(LBP)L组成。"""
     """$ \qquad $ 我们为训练序列中的每一帧计算这些参数$K^S$。目标描述符$K^T$由表情转移的结果和驱动参与者的帧的LBP组成。我们测量源和目标参数之间的距离如下："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片114.png', caption='图114')
+        st.image('./chapter5_GM/pages/图片/图片114.png', caption='图114')
     """$ \qquad $ 第一项Dp度量参数空间中的距离："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片115.png', caption='图115')
+        st.image('./chapter5_GM/pages/图片/图片115.png', caption='图115')
     """$ \qquad $ 第二项$D_m$测量稀疏面部landmarks的差异相容性："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片116.png', caption='图116')
+        st.image('./chapter5_GM/pages/图片/图片116.png', caption='图116')
     """$ \qquad $ 在这里，$\Omega$是一组预定义的landmark对，定义了诸如上唇和下唇之间或口腔左右角之间的距离。最后一项$D_a$是一个外观测量项，由以下两部分组成："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片117.png', caption='图117')
+        st.image('./chapter5_GM/pages/图片/图片117.png', caption='图117')
     """$ \qquad $ $\\tau$是用于前一帧中再现的最后检索帧索引。$D_l(K^T,k^S_t)$基于通过Chi Squared距离进行比较的LBPs来衡量相似性。
     $D_c(\\tau,t)$基于归一化口帧的RGB互相关来度量最后检索到的帧$\\tau$与视频帧t之间的相似性。"""
     """$ \qquad $ 我们将这种帧到帧的距离度量应用到帧到集群匹配策略中，从而实现实时速率，并减轻口帧之间的高频跳跃。"""

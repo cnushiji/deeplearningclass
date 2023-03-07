@@ -26,7 +26,7 @@ with tab1:
     st.latex(r"""D_s\ne{D_t},或者T_s\ne{T_t}""")
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片1.png', caption='图1 TL示意图')
+        st.image('./chapter6_RL/pages/图片/图片1.png', caption='图1 TL示意图')
     """- TL的分类:"""
     """$ \qquad $ 1. 根据特征空间或标签空间是否同构，可以将迁移学习分为同构迁移学习和异构迁移学习。"""
     """$ \qquad $ 2. 根据目标域中是否有标签数据将现有的迁移学习方法分为以下三类：监督TL、半监督TL和无监督TL。"""
@@ -82,7 +82,7 @@ with tab1:
     """$ \qquad $ 最大均值差异Maximal Mean Discrepancy(MMD)"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片2.png', caption='图2')
+        st.image('./chapter6_RL/pages/图片/图片2.png', caption='图2')
     """$ \qquad $ 其中$\phi$是再生希尔伯特空间(RKHS)H的核函数，$\Vert \cdot \Vert_𝐻$表示H上的范数。"""
     """$ \qquad $ 2. 学习通用特征"""
     """$ \qquad $ 3. 特征增强"""
@@ -100,7 +100,7 @@ with tab1:
     """$ \qquad $ 模型中标准的正则化形式："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片3.png', caption='图3')
+        st.image('./chapter6_RL/pages/图片/图片3.png', caption='图3')
     """$ \qquad $ 这个式子表明该正则化使用正则权重𝛼正则化𝜃 。其中"""
     st.latex(r"""\theta_𝑠=\theta_0+𝑣_𝑠,\theta_𝑡=\theta_0+𝑣_𝑡""")
     """$ \qquad $ 利用任务间的不变特征(模型迁移学习中被迁移的部分、源域模型中的任务无关参数)，提高目标模型的泛化性能。"""
@@ -145,7 +145,7 @@ with tab2:
     """ 首先对于解决数据分布不同问题，一般都是通过学习一个特征转换来入手，使得在转换过后的特征空间上，源数据 和 目标数据 分布的区分度达到最小。源域与目标域区别主要体现在数据分布上，这个问题又分为三大类："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片56.png', caption='图56')
+        st.image('./chapter6_RL/pages/图片/图片56.png', caption='图56')
     """ 边缘分布：数据在特征空间中的分布，初学者可以把特征空间理解为数据分布或者数据信息就好。一般给你几万张图片，它们的分布是怎样？衡量图像分布我们通过特征（例如，haar特征，梯度，颜色直方图等等）来实现，将图像特征量化成数字，分布就能看出来了。"""
     """ 条件分布：某个确定样本的分类概率分布了，例如：伯努利分布等。"""
     """- 常用的域自适应方法："""
@@ -153,11 +153,11 @@ with tab2:
     """ 2.特征自适应：将源域和目标域投影到公共特征子空间，这样两者的分布相匹配，通过学习公共的特征表示，这样在公共特征空间，源域和目标域的分布就会相同。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片57.png', caption='图57')
+        st.image('./chapter6_RL/pages/图片/图片57.png', caption='图57')
     """ 3.模型自适应：考虑目标域的误差，对源域误差函数进行修改。假设利用上千万的数据来训练好一个模型，当我们遇到一个新的数据领域问题的时候，就不用再重新去找几千万个数据来训练，只需把原来训练好的模型迁移到新的领域，在新的领域往往只需相对较少的数据就同样可以得到很高的精度。实现的原理则是利用模型之间存在的相似性。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片58.png', caption='图58')
+        st.image('./chapter6_RL/pages/图片/图片58.png', caption='图58')
 
 
 

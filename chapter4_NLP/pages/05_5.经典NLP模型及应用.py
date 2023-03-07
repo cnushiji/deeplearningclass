@@ -9,7 +9,7 @@ with tab1:
     """- 2018年3月提出，解决多义性"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片38.png', caption='图38')
+        st.image('./chapter4_NLP/pages/图片/图片38.png', caption='图38')
     """- ELMo模型对语句的正向和逆向分别使用了LSTM(双向的LSTM),可以更好的捕获语句中上下文之间的关系，并使用了多层的LSTM结构（上图中是两层），底层的LSTM可以用于捕获句法信息，顶层的LSTM可以用于捕获语义信息。"""
     """- 优势："""
     r"""$ \qquad $ 1.多义词方面的极大改善。"""
@@ -19,7 +19,7 @@ with tab1:
     r"""$ \qquad $ 2.训练时间长，这也是RNN的本质导致的，和上面特征提取缺点差不多。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片39.png', caption='图39')
+        st.image('./chapter4_NLP/pages/图片/图片39.png', caption='图39')
 with tab2:
     """- Google Brain实习生尤洋把预训练BERT的速度足足提高了64倍。训练时间从4860分钟，变成了76分钟11秒。训练完成后，在机器问答数据集SQuAD-v1上测试一下，F1得分比原来的三天三夜版还要高一点点。"""
     """- 从本质上分析，BERT语言模型就是Transformer模型的编码器部分。"""
@@ -29,7 +29,7 @@ with tab2:
     """- 对比ELMo，虽然都是“双向”，但目标函数其实是不同的。ELMo是分别以[公式] 和 [公式] 作为目标函数，独立训练处两个representation然后拼接，而BERT则是以 [公式] 作为目标函数训练LM。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片40.png', caption='图40')
+        st.image('./chapter4_NLP/pages/图片/图片40.png', caption='图40')
 
 with tab3:
     """- GPT的核心思想是先通过无标签的文本去训练生成语言模型，再根据具体的NLP任务（如文本蕴涵、QA、文本分类等），来通过有标签的数据对模型进行fine-tuning。"""
@@ -37,24 +37,24 @@ with tab3:
     """- 2020年6月，GPT-3，有1750亿个参数。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片41.png', caption='图41')
+        st.image('./chapter4_NLP/pages/图片/图片41.png', caption='图41')
     """- GPT 使用 Transformer 的 Decoder 结构，并对 Transformer Decoder 进行了一些改动，原本的 Decoder 包含了两个 Multi-Head Attention 结构，GPT 只保留了 Mask Multi-Head Attention。"""
     _, col1, _ = st.columns([1, 1, 1])
     with col1:
-        st.image('./pages/图片/图片42.png', caption='图42')
+        st.image('./chapter4_NLP/pages/图片/图片42.png', caption='图42')
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./pages/图片/图片43.png', caption='图43')
+        st.image('./chapter4_NLP/pages/图片/图片43.png', caption='图43')
     """- GPT-2 主要就是在 GPT 的基础上，又添加了多个任务，扩增了数据集和模型参数，又训练了一番。我们一般的 NLP 任务，文本分类模型就只能分类，分词模型就只能分词，机器翻译也就只能完成翻译这一件事，非常不灵活。
     这个过程也和人脑很像，人脑是非常稳定和泛化的，既可以读诗歌，也可以学数学，还可以学外语，看新闻，听音乐等等，简而言之，就是一脑多用。"""
     _, col1, _ = st.columns([1, 1, 1])
     with col1:
-        st.image('./pages/图片/图片97.png', caption='图97 GPT-2学习效果图')
+        st.image('./chapter4_NLP/pages/图片/图片97.png', caption='图97 GPT-2学习效果图')
 
     """- GPT-3 的模型所采用的数据量之大，高达上万亿，模型参数量也十分巨大，学习之复杂。如图所示："""
     _, col1, _ = st.columns([1, 1, 1])
     with col1:
-        st.image('./pages/图片/图片98.png', caption='图98')
+        st.image('./chapter4_NLP/pages/图片/图片98.png', caption='图98')
     """- GPT-3 里的大模型计算量是 Bert-base 的上千倍。如此巨大的模型造就了 GPT-3 在许多十分困难的 NLP 任务，诸如撰写人类难以判别的文章，甚至编写SQL查询语句，React或者JavaScript代码上优异的表现。GPT-n 系列模型都是采用 decoder 进行训练的，也就是更加适合文本生成的形式。也就是，输入一句话，输出也是一句话。也就是对话模式。"""
 
     """- $\\textbf{ChatGPT}$"""
@@ -62,7 +62,7 @@ with tab3:
     """- 强化学习非常像生物进化，模型在给定的环境中，不断地根据环境的惩罚和奖励（reward），拟合到一个最适应环境的状态。"""
     _, col1, _ = st.columns([1, 1, 1])
     with col1:
-        st.image('./pages/图片/图片99.png', caption='图99')
+        st.image('./chapter4_NLP/pages/图片/图片99.png', caption='图99')
     """- NLP 所依赖的环境，是整个现实世界，整个世界的复杂度，远远不是一个19乘19的棋盘可以比拟的。无法设计反馈惩罚和奖励函数，即 reward 函数。除非人们一点点地人工反馈。"""
     """- open-ai 的 chatGPT 就把这事给干了。撒钱，找40个外包，标起来！"""
     """- 如何构建一个 reward 函数，具体就是让那40名外包人员不断地从模型的输出结果中筛选，哪些是好的，哪些是低质量的，这样就可以训练得到一个 reward 模型。通过reward 模型来评价模型的输出结果好坏。"""
@@ -76,14 +76,14 @@ with tab4:
     """$ \qquad $ 同样地，将生成的词加入译文序列，然后重复上述步骤反复迭代，不断生成之后的每一个译词。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片44.gif', caption='图44')
+        st.image('./chapter4_NLP/pages/图片/图片44.gif', caption='图44')
     """$ \qquad $ 当代表句子终止的符号被模型选择出来之后，停止迭代过程，并进行反符号化处理，得到自然语句译文。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片45.gif', caption='图45')
+        st.image('./chapter4_NLP/pages/图片/图片45.gif', caption='图45')
 
     """- 语音识别："""
     """$ \qquad $ 语音识别的目的是将人类语音中的词汇内容转换为计算机可读的输入内容。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片46.png', caption='图46')
+        st.image('./chapter4_NLP/pages/图片/图片46.png', caption='图46')

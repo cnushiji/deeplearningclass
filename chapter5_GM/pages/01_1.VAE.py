@@ -18,7 +18,7 @@ with tab1:
     """构建一个自编码器需要两部分：编码器（Encoder）和解码器（Decoder）。编码器将输入压缩为潜在空间表征，可以用函数f(x)来表示，解码器将潜在空间表征重构为输出，可以用函数g(x)来表示，编码函数f(x)和解码函数g(x)都是神经网络模型。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片1.jpg', caption='图1 AE网络结构')
+        st.image('./chapter5_GM/pages/图片/图片1.jpg', caption='图1 AE网络结构')
     """- AE优缺点:"""
     """$ \qquad $ 1. AutoEncoder是从数据集训练出来的，因此它的压缩能力仅适用于与训练样本相似的数据；"""
     """$ \qquad $ 2. AutoEncoder 还要求 encoder 和 decoder 的能力不能太强。极端情况下，它们有能力完全记忆住训练样本，也就是严重的过拟合。"""
@@ -26,11 +26,11 @@ with tab1:
     """$ \qquad $ 自编码器通常有两个方面的应用：一是数据去噪，二是为进行可视化而降维。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片2.jpg', caption='图2')
+        st.image('./chapter5_GM/pages/图片/图片2.jpg', caption='图2')
     """- AE的变体:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片3.png', caption='图3')
+        st.image('./chapter5_GM/pages/图片/图片3.png', caption='图3')
 
 with tab2:
     """机器学习有两种范式："""
@@ -38,11 +38,11 @@ with tab2:
     """$ \qquad $ （2）生成模型：学习p(x|y)，回归模型。变分自编码器是一种生成模型。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片4.jpg', caption='图4')
+        st.image('./chapter5_GM/pages/图片/图片4.jpg', caption='图4')
     """- VAE-理论推导:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片5.png', caption='图5')
+        st.image('./chapter5_GM/pages/图片/图片5.png', caption='图5')
     """- 重参数化:"""
     """$ \qquad $ 分布q(z|x,ϕ)依赖于参数ϕ。"""
     """$ \qquad $ 重参数化（reparameterization）是实现通过随机变量实现反向传播的一种重要手段。"""
@@ -50,15 +50,15 @@ with tab2:
     """- VAE-训练过程:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片6.png', caption='图6')
+        st.image('./chapter5_GM/pages/图片/图片6.png', caption='图6')
     """- VAE-学习到的隐变量流形:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片7.png', caption='图7')
+        st.image('./chapter5_GM/pages/图片/图片7.png', caption='图7')
     """- VAE-网络结构:"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./pages/图片/图片8.png', caption='图8')
+        st.image('./chapter5_GM/pages/图片/图片8.png', caption='图8')
     """- VAE的优缺点:"""
     """$ \qquad $ 1.优点："""
     """$ \qquad \qquad $ 可对数据进行低维表征学习；"""
