@@ -13,7 +13,7 @@ st.markdown(
   <center>深度学习的数学基础与工程实践</center>
   </h1>
   <body>
-  """,, unsafe_allow_html=True)
+  """,unsafe_allow_html=True)
 
 st.markdown(' ## 目录')
 
