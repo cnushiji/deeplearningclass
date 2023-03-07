@@ -87,7 +87,7 @@ with tab3:
     r"""$ \qquad $ 其余均默认"""
     _ , col1, _ = st.columns([1,1,1])
     with col1:
-        st.image('./pages/图片/图片4.png',caption='图4')
+        st.image('./chapter1_Introduction/pages/图片/图片4.png',caption='图4')
 
     """- pycharm配置Anaconda环境："""
     r"""$ \qquad $ Step1 双击打开pycharm，点击new project，可更改路径，点击create"""
@@ -103,11 +103,11 @@ with tab3:
     col1, col2 = st.columns([1, 1.03])
     col3, col4 = st.columns([1, 1.23])
     with col1:
-        st.image('./pages/图片/图片5.png', caption='图5')
+        st.image('./chapter1_Introduction/pages/图片/图片5.png', caption='图5')
     with col2:
-        st.image('./pages/图片/图片6.png', caption='图6')
+        st.image('./chapter1_Introduction/pages/图片/图片6.png', caption='图6')
     with col3:
-        st.image('./pages/图片/图片7.png', caption='图7')
+        st.image('./chapter1_Introduction/pages/图片/图片7.png', caption='图7')
     with col4:
-        st.image('./pages/图片/图片8.png', caption='图8')
+        st.image('./chapter1_Introduction/pages/图片/图片8.png', caption='图8')
 
