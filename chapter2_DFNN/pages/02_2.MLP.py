@@ -9,22 +9,22 @@ with tab1:
     """- 人工神经元模型："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片10.png', caption='图10')
+        st.image('./chapter2_DFNN/pages/图片/图片10.png', caption='图10')
     """- 激活函数："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片11.png', caption='图11')
+        st.image('./chapter2_DFNN/pages/图片/图片11.png', caption='图11')
     """- MLP："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片12.png', caption='图12')
+        st.image('./chapter2_DFNN/pages/图片/图片12.png', caption='图12')
     """- 万有逼近定理："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片13.png', caption='图13')
+        st.image('./chapter2_DFNN/pages/图片/图片13.png', caption='图13')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片14.png', caption='图14')
+        st.image('./chapter2_DFNN/pages/图片/图片14.png', caption='图14')
 
 with tab2:
     """- 优化的原因："""
@@ -44,7 +44,7 @@ with tab2:
     r"""$\qquad \qquad $ 直观启发：在负梯度方向上函数值下降最快。因此，如果我们每次沿着负梯度方向移动$ \theta $，那么函数值就会不断下降。"""
     _, col1, _ = st.columns([2, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片15.png', caption='图15')
+        st.image('./chapter2_DFNN/pages/图片/图片15.png', caption='图15')
 
     r"""$ \qquad $ 公式："""
     st.latex(r"""\theta_{n+1}=\theta_n-\alpha{\frac{1}{m}\sum_i{\nabla_{\theta_n}{l(x^{(i)},\theta_n)}}}""")
@@ -54,7 +54,7 @@ with tab2:
     r"""$ \qquad $ 优化结果："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片16.jpg', caption='图16')
+        st.image('./chapter2_DFNN/pages/图片/图片16.jpg', caption='图16')
 
     """- 深度学习中的优化方法："""
     r"""$ \qquad $ 1.随机梯度下降——Vanilla-SGD："""
@@ -64,7 +64,7 @@ with tab2:
     st.latex(r"""\theta_{n+1}=\theta_n-\alpha{\cdot{\nabla_{\theta_n}l(x^{(i)},\theta_n)}}""")
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片17.png', caption='图17')
+        st.image('./chapter2_DFNN/pages/图片/图片17.png', caption='图17')
     r"""$ \qquad \qquad $ """
     r"""$ \qquad $ 2.随机梯度下降——minibatch-SGD："""
     r"""$ \qquad \qquad $ 问题：原始SGD方法收敛速度慢，训练不稳定。"""
@@ -80,9 +80,9 @@ with tab2:
     st.latex(r"""\theta_{t+1}=\theta_t-m_t""")
     col1, col2 = st.columns([1,1.1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片18.png', caption='图18 SGD')
+        st.image('./chapter2_DFNN/pages/图片/图片18.png', caption='图18 SGD')
     with col2:
-        st.image('./chapter2_MLP/pages/图片/图片19.png', caption='图19 Momentum')
+        st.image('./chapter2_DFNN/pages/图片/图片19.png', caption='图19 Momentum')
     r"""$ \qquad $ 4.Nestrov加速梯度(NAG)："""
     r"""$ \qquad \qquad $ 直观想法：在目标函数有增高趋势之前，减缓更新速率。"""
     r"""$ \qquad \qquad $ NAG原理：计算未来位置的梯度，并结合历史梯度信息得到下降方向。"""
@@ -92,7 +92,7 @@ with tab2:
     st.latex(r"""\theta_{t+1}=\theta_t-m_t""")
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片20.png', caption='图20')
+        st.image('./chapter2_DFNN/pages/图片/图片20.png', caption='图20')
     r"""$ \qquad \qquad $ """
     r"""$ \qquad $ 5.自适应学习率方法(AdaGrad/RMSProp)"""
     r"""$ \qquad \qquad $ 自适应调整学习率：随着优化的进行，参数梯度的变化越来越小，而一直用固定的学习率是否合适？"""
@@ -118,12 +118,12 @@ with tab2:
     r"""$ \qquad \qquad $ 示例，学习一个定义在[-1,1]上的一维函数$𝑦=0.5𝑥^2$。"""
     col1, col2= st.columns([1,1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片21.gif', caption='图21')
+        st.image('./chapter2_DFNN/pages/图片/图片21.gif', caption='图21')
     with col2:
-        st.image('./chapter2_MLP/pages/图片/图片22.gif', caption='图22')
+        st.image('./chapter2_DFNN/pages/图片/图片22.gif', caption='图22')
     _, col1, _= st.columns([1, 1.2, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片23.gif', caption='图23')
+        st.image('./chapter2_DFNN/pages/图片/图片23.gif', caption='图23')
     r"""$ \qquad $ 总结："""
     r"""$ \qquad \qquad $ 1.回忆一下要点：损失函数+梯度下降，即利用当前梯度，历史梯度，下一步梯度的不同结合策略形成了不同的优化方法方法。"""
     r"""$ \qquad \qquad $ 2.哪种优化方法最好？没有一种优化方法对所有的问题都是最好的，通常推荐Adam方法。"""
@@ -140,44 +140,44 @@ with tab3:
     """- 递归地使用链式法则反向传播："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片24.png', caption='图24')
+        st.image('./chapter2_DFNN/pages/图片/图片24.png', caption='图24')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片25.png', caption='图25')
+        st.image('./chapter2_DFNN/pages/图片/图片25.png', caption='图25')
     r"""$ \qquad $ 前向过程："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片26.png', caption='图26')
+        st.image('./chapter2_DFNN/pages/图片/图片26.png', caption='图26')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片27.png', caption='图27')
+        st.image('./chapter2_DFNN/pages/图片/图片27.png', caption='图27')
     _, col1, _ = st.columns([1, 4, 1])
     r"""$ \qquad $ 反向过程："""
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片28.png', caption='图28')
+        st.image('./chapter2_DFNN/pages/图片/图片28.png', caption='图28')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片29.png', caption='图29')
+        st.image('./chapter2_DFNN/pages/图片/图片29.png', caption='图29')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片30.png', caption='图30')
+        st.image('./chapter2_DFNN/pages/图片/图片30.png', caption='图30')
     r"""$ \qquad \qquad $ 上图中，$\sigma'{(z)}$是常数，因为z在Forward Pass的时候就已经被确定了。"""
     r"""$ \qquad $ 最后的问题只有如何计算$ \frac{\partial{C}}{\partial{z'}},\frac{\partial{C}}{\partial{z"}} $，如下图："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片31.png', caption='图31')
+        st.image('./chapter2_DFNN/pages/图片/图片31.png', caption='图31')
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片32.png', caption='图32')
+        st.image('./chapter2_DFNN/pages/图片/图片32.png', caption='图32')
     r"""$ \qquad $ 从output layer计算$ \frac{\partial{C}}{\partial{z}} $，如下图："""
     st.latex(r"""\frac{\partial{C}}{\partial{z_3}}=\sigma'{z_3}[w_5\frac{\partial{C}}{\partial{z_5}}+w_6\frac{\partial{C}}{\partial{z_6}}]""")
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片33.png', caption='图33')
+        st.image('./chapter2_DFNN/pages/图片/图片33.png', caption='图33')
     r"""$ \qquad $ 总结："""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片34.png', caption='图34')
+        st.image('./chapter2_DFNN/pages/图片/图片34.png', caption='图34')
 
     """- 梯度消失和梯度爆炸："""
     r"""$ \qquad $ Vanishing gradient problem: 由于Sigmoid型函数的饱和性，饱和区的导数更是接近于0。这样，误差经过每一层传递都会不断衰减．当网络层数很深时，梯度就会不停衰减，甚至消失，使得整个网络很难训练．这就是所谓的梯度消失问题（Vanishing Gradient Problem），也称为梯度弥散问题。"""
@@ -197,7 +197,7 @@ b.grad.data.zero_()
     r"""$ \qquad \qquad $ 为了更精确地描述反向传播算法，使用更精确的计算图(computational graph)语言是很有帮助的。计算图是数学运算的图形化表示。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片35.png', caption='图35')
+        st.image('./chapter2_DFNN/pages/图片/图片35.png', caption='图35')
     r"""$ \qquad \qquad $ 图中的每一个节点来表示一个变量。变量可以是标量、向量、矩阵、张量或者甚至是另一类型的变量。边表示运算或操作operation。"""
     r"""$ \qquad \qquad $ 计算图中每个叶子节点为一个输入变量或常量。每个非叶子节点表示一个中间变量，是一个或多个变量的简单函数。"""
     r"""$ \qquad \qquad $ 根据计算图搭建方式的不同，可将计算图分为静态图和动态图。"""
@@ -272,7 +272,7 @@ std=gain*sqrt(2/fan_in+fan_out)
     st.code(r"""torh.nn.init.calculate_gain(nonlinearity,param=None)""")
     _, col1, _ = st.columns([1, 1, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片36.png', caption='图36')
+        st.image('./chapter2_DFNN/pages/图片/图片36.png', caption='图36')
 
 with tab5:
     """- $L_1,L_2$正则化和权重衰减："""
@@ -295,7 +295,7 @@ with tab5:
     r"""$ \qquad \qquad $ 另一方面，参数的变化导致每层的输入分布会发生改变，进而上层的网络需要不停地去适应这些分布变化，使得我们的模型训练变得困难。上述这一现象叫做Internal Covariate Shift。"""
     _, col1, _ = st.columns([1, 4, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片37.png', caption='图37')
+        st.image('./chapter2_DFNN/pages/图片/图片37.png', caption='图37')
     r"""$ \qquad $ 1.什么是Internal Covariate Shift?"""
     r"""$ \qquad \qquad $ 定义：在深层网络训练的过程中，由于网络中参数变化而引起内部节点数据分布发生变化的这一过程被称作Internal Covariate Shift。"""
     r"""$ \qquad \qquad $ 解释：我们定义每一层的线性变换为$ Z^{[l]}=W^{[l]}\times{input}+b^{[l]} $，其中l代表层数；非线性变换为$ A^{[l]}=g^{[l]}(Z^{[l]}) $,其中$g^{[l]}(\cdot)$为第l层的激活函数。随着梯度下降的进行，每一层的参数$W^{[l]}$与$b^{[l]}$都会被更新，那么$Z^{[l]}$的分布也就发生了改变，进而𝐴^([𝑙]) 也同样出现分布的改变。而$A^{[l]}$作为第l+1层的输入，意味着l+1层就需要去不停地适应这种数据分布的变化，这一过程就被叫做Internal Covariate Shift。
@@ -347,18 +347,18 @@ with tab5:
     r"""$ \qquad $ Dropout工作原理：我们在前向传播的时候，让某个神经元的激活值以一定的概率p停止工作，这样可以使模型泛化性更强，因为它不会太依赖某些局部的特征，如图所示。 """
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片38.png', caption='图38')
+        st.image('./chapter2_DFNN/pages/图片/图片38.png', caption='图38')
     r"""$ \qquad $ 工作流程："""
     r"""$ \qquad \qquad $ 假设我们要训练这样一个神经网络，如图所示。"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片39.png', caption='图39')
+        st.image('./chapter2_DFNN/pages/图片/图片39.png', caption='图39')
     r"""$ \qquad \qquad $ 输入是x，输出是y,正常的流程是：首先把x通过网络前向传播，然后把误差反向传播以决定如何更新参数让网络进行学习。使用Dropout之后，过程变成如下："""
     r"""$ \qquad \qquad $ （1）首先随机（临时）删掉网格中一半的隐藏神经元，输入输出神经元保持不变，图中虚线为部分临时被删除的神经元 。"""
     r"""$ \qquad \qquad $ （2）把输入x通过修改后的网格前向传播，然后把得到的损失结果通过修改的网络后向传播。一小批训练样本执行完这个过程后，在没有被删除的神经元上按照随机梯度下降法更新对应的参数(w,b)。"""
     _, col1, _ = st.columns([1, 2, 1])
     with col1:
-        st.image('./chapter2_MLP/pages/图片/图片40.png', caption='图40')
+        st.image('./chapter2_DFNN/pages/图片/图片40.png', caption='图40')
     r"""$ \qquad \qquad $ (3)然后继续重复这一过程："""
     r"""$ \qquad \qquad $ 恢复被删掉的神经元（此时被删除的神经元保持原样，而没有被删除的神经元已经有所更新）"""
     r"""$ \qquad \qquad $ 从隐藏层神经元中随机选择一个一半大小的子集临时删除掉（备份被删除神经元的参数）。"""
